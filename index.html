@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tulum Sonrise Tours</title>
+<meta name="description" content="Traslados privados del aeropuerto de Cancún y Tulum, transporte privado y tours a Tulum, Chichén Itzá, Cobá, cenotes y Bacalar. Cotiza por WhatsApp.">
+<meta property="og:title" content="Tulum Sonrise Tours · Transporte privado en la Riviera Maya">
+<meta property="og:description" content="Del aeropuerto al mar, por la selva. Cotiza tu traslado por WhatsApp.">
+<meta property="og:image" content="assets/media/costa-aerea.jpg">
+<meta property="og:type" content="website">
+<!-- [CONFIRMAR] cuando tengas dominio, usa URL completas: https://TU-DOMINIO/ y https://TU-DOMINIO/assets/media/costa-aerea.jpg -->
+<meta property="og:url" content="https://TU-DOMINIO/">
+<meta name="theme-color" content="#FBF6EE">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="icon" href="assets/icono.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/media/v-hero-poster.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- [CONFIRMAR] datos reales del negocio -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TravelAgency","name":"Tulum Sonrise Tours",
+ "description":"Transporte turístico y privado en la Riviera Maya: traslados de aeropuerto, transporte privado y tours.",
+ "logo":"assets/logo.svg","telephone":"+52 984 232 4975","email":"hola@tulumsonrisetours.com",
+ "address":{"@type":"PostalAddress","addressLocality":"Tulum","addressRegion":"Quintana Roo","addressCountry":"MX"},
+ "geo":{"@type":"GeoCoordinates","latitude":20.2114,"longitude":-87.4654},
+ "areaServed":["Tulum","Cancún","Playa del Carmen","Riviera Maya"]}
+</script>
+
+<style>
+/* Layout idea: a film in planes. Full-bleed footage of sea, jungle and road carries the colour;
+   the interface is limestone paper and jungle-green ink, text anchored top-left like title cards. */
+:root {
+  --cal: #FBF6EE;        /* white sand */
+  --arena: #F3E6D0;      /* warm sand band */
+  --selva: #2E7D4F;      /* jungle green (accents only) */
+  --ink: #0B2D52;        /* text: logo navy */
+  --deep: #127A7E;       /* colour planes: lagoon teal (intertitle, menu, tiles) */
+  --foot: #0E6467;       /* footer: deeper lagoon */
+  --sol: #F5A524;        /* sunset gold: main call to action */
+  --sol-2: #FFBF47;
+  --selva-2: #1C3A2E;
+  --musgo: #5D6B78;      /* muted text */
+  --linea: #E4D6BF;      /* hairlines */
+  --cenote: #19B6B0;     /* turquoise: hovers and focus */
+  --on-dark: #FFFDF8;
+  --on-dark-soft: #D3ECEA;
+  --font: "Albert Sans", "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(20px, 4.4vw, 64px);
+  --wrap: 1320px;
+  --gap: clamp(96px, 13vw, 200px);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--cal); color: var(--ink); font: 400 17px/1.7 var(--font); letter-spacing: -0.012em; -webkit-font-smoothing: antialiased; }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p, figure, dl, dd, ol, ul { margin: 0; }
+h1, h2, h3 { font-weight: 300; letter-spacing: -0.035em; text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--cenote); outline-offset: 4px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+.cap { font-size: 13px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.display { font-size: clamp(46px, 7.4vw, 112px); line-height: 1.0; }
+.statement { font-size: clamp(30px, 3.9vw, 56px); line-height: 1.12; }
+.muted { color: var(--musgo); }
+body.show-tbc .tbc::after { content: " [CONFIRMAR]"; font-size: 10px; font-weight: 500; letter-spacing: .08em; color: #B4561F; vertical-align: super; }
+
+.btn { display: inline-flex; align-items: center; gap: 12px; min-height: 50px; padding: 14px 26px; border-radius: 999px; border: 1px solid currentColor; background: transparent; color: inherit; font: 400 15px/1 var(--font); letter-spacing: -0.01em; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; }
+.btn--cenote { background: var(--sol); border-color: var(--sol); color: var(--ink); }
+.btn--cenote:hover { background: var(--sol-2); border-color: var(--sol-2); }
+.btn--light:hover { background: var(--on-dark); color: var(--ink); border-color: var(--on-dark); }
+.btn--dark:hover { background: var(--ink); color: var(--cal); }
+.btn i { font-style: normal; transition: transform .3s; }
+.btn:hover i { transform: translateX(4px); }
+
+/* ---------- Header: title card ---------- */
+.header { position: fixed; inset: 0 0 auto; z-index: 30; color: #fff; transition: background-color .35s, color .35s; }
+.header__in { display: flex; align-items: center; gap: 16px; height: 88px; }
+.brand { display: flex; align-items: center; position: relative; }
+.brand img { width: auto; height: 68px; transition: opacity .35s; }
+.brand .logo-c { position: absolute; left: 0; top: 0; opacity: 0; }
+.header.is-solid .brand .logo-w { opacity: 0; }
+.header.is-solid .brand .logo-c { opacity: 1; }
+@media (max-width: 719px) { .brand img { height: 54px; } }
+.header__right { margin-left: auto; display: flex; align-items: center; gap: 24px; }
+.lang { display: flex; gap: 8px; font-size: 14px; }
+.lang button { background: none; border: 0; padding: 6px 0; color: inherit; font: inherit; cursor: pointer; opacity: .55; }
+.lang button[aria-pressed="true"] { opacity: 1; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.lang { gap: 10px; }
+.header .lang { border: 1px solid currentColor; border-radius: 999px; padding: 4px 6px 4px 12px; align-items: center; gap: 2px; background: rgba(255,255,255,.08); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.header .lang svg { width: 15px; height: 15px; margin-right: 4px; opacity: .85; flex: none; }
+.header .lang button { padding: 5px 7px; border-radius: 999px; opacity: .75; font-size: 13px; letter-spacing: .04em; text-decoration: none; transition: background-color .2s, color .2s, opacity .2s; }
+.header .lang button:hover { opacity: 1; }
+.header .lang button[aria-pressed="true"] { opacity: 1; background: var(--sol); color: var(--ink); text-decoration: none; }
+.header.is-solid .lang { background: #fff; }
+@media (max-width: 719px) { .header .lang { padding: 3px 4px 3px 4px; } .header .lang svg { display: none; } .header .lang button { padding: 5px 6px; font-size: 12px; } .header__right { gap: 10px; } }
+.lang--menu { width: 100%; flex-wrap: wrap; gap: 8px 18px; font-size: 16px; margin-bottom: 8px; }
+.lang--menu button { color: var(--on-dark); }
+.burger { width: 44px; height: 44px; border: 0; background: none; color: inherit; cursor: pointer; display: grid; place-content: center; gap: 8px; }
+.burger i { display: block; width: 28px; height: 1px; background: currentColor; }
+.header .btn { min-height: 42px; padding: 10px 20px; display: none; }
+@media (min-width: 720px) { .header .btn { display: inline-flex; } }
+.header.is-solid { background: var(--cal); color: var(--ink); }
+.header.is-solid .btn--light:hover { background: var(--ink); color: var(--cal); border-color: var(--ink); }
+
+.menu { position: fixed; inset: 0; z-index: 40; background: var(--deep); color: var(--on-dark); display: flex; flex-direction: column; visibility: hidden; opacity: 0; transform: translateY(-12px); transition: opacity .4s, transform .5s cubic-bezier(.2,.7,.1,1), visibility 0s .5s; padding: 0 var(--gutter) 40px; }
+.menu.is-open { visibility: visible; opacity: 1; transform: none; transition: opacity .4s, transform .5s cubic-bezier(.2,.7,.1,1), visibility 0s; }
+.menu__top { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+.menu__close { background: none; border: 0; color: inherit; font: inherit; font-size: 15px; cursor: pointer; }
+.menu nav { margin: auto 0; display: grid; }
+.menu nav a { font-size: clamp(40px, 7.5vw, 92px); font-weight: 300; letter-spacing: -0.04em; line-height: 1.12; transition: color .2s; }
+.menu nav a:hover { color: var(--sol-2); }
+.menu__foot { display: flex; flex-wrap: wrap; gap: 12px 40px; color: var(--on-dark-soft); font-size: 15px; }
+
+/* ---------- Full-bleed film planes ---------- */
+.plane { position: relative; overflow: hidden; background: var(--deep); color: #fff; }
+.plane > video, .plane > img, .plane picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.plane::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(8,36,62,.55) 0%, rgba(8,36,62,0) 34%), linear-gradient(0deg, rgba(8,36,62,.55) 0%, rgba(8,36,62,0) 40%); }
+.plane__in { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; }
+
+.hero { height: 100svh; min-height: 620px; max-height: 1100px; }
+.hero .plane__in { padding-top: 150px; padding-bottom: 40px; }
+.hero h1 { max-width: 10.5em; }
+.hero h1 span { display: block; overflow: hidden; }
+.hero h1 span > span { display: inline-block; animation: up 1.1s cubic-bezier(.2,.7,.1,1) both; }
+.hero h1 span:nth-child(2) > span { animation-delay: .1s; }
+.hero h1 span:nth-child(3) > span { animation-delay: .2s; }
+@keyframes up { from { transform: translateY(104%); } to { transform: none; } }
+.hero__foot { margin-top: auto; display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: end; justify-content: space-between; }
+.hero__foot p { max-width: 28em; font-size: 18px; color: rgba(255,255,255,.9); }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.coords { font-size: 13px; letter-spacing: .06em; color: rgba(255,255,255,.78); text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- Statement plane ---------- */
+.intro { padding: var(--gap) 0 calc(var(--gap) * .7); }
+.intro__grid { display: grid; gap: 56px; }
+@media (min-width: 980px) { .intro__grid { grid-template-columns: 1fr 1.9fr; gap: 64px; } }
+.facts { list-style: none; padding: 0; margin-top: clamp(56px, 7vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); border-top: 1px solid var(--linea); }
+.facts li { padding: 22px 24px 22px 0; border-bottom: 1px solid var(--linea); font-size: 16px; line-height: 1.5; }
+.facts b { display: block; font-weight: 400; color: var(--musgo); font-size: 14px; margin-bottom: 4px; }
+
+/* ---------- Fleet ---------- */
+.fleet { height: clamp(460px, 82vh, 900px); }
+.fleet .plane__in { padding-top: clamp(40px, 6vw, 80px); padding-bottom: clamp(32px, 4vw, 56px); }
+.fleet p.statement { max-width: 11em; }
+.fleet .cap { margin-bottom: 18px; opacity: .85; }
+.strip { display: grid; grid-template-columns: 1fr; gap: 2px; background: var(--cal); }
+@media (min-width: 760px) { .strip { grid-template-columns: 1.25fr 1fr 1fr; } }
+.strip figure { position: relative; }
+.strip img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.strip figure:first-child img { aspect-ratio: auto; height: 100%; min-height: 100%; }
+@media (max-width: 759px) { .strip img, .strip figure:first-child img { aspect-ratio: 4 / 3; height: auto; } }
+.strip figcaption { position: absolute; left: 20px; bottom: 18px; right: 20px; color: #fff; font-size: 15px; text-shadow: 0 1px 12px rgba(0,0,0,.45); }
+
+/* ---------- Services index ---------- */
+.services { padding: var(--gap) 0; }
+.services__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: clamp(48px, 6vw, 88px); }
+.index { list-style: none; padding: 0; border-top: 1px solid var(--ink); }
+.index li { border-bottom: 1px solid var(--linea); }
+.index a { display: grid; grid-template-columns: 3.2em 1fr auto; gap: 16px; align-items: baseline; padding: clamp(22px, 3vw, 36px) 0; }
+.index .n { font-size: 14px; color: var(--musgo); font-variant-numeric: tabular-nums; }
+.index h3 { font-size: clamp(32px, 4.8vw, 72px); line-height: 1.02; transition: transform .5s cubic-bezier(.2,.7,.1,1); }
+.index p { grid-column: 2; font-size: 16px; color: var(--musgo); max-width: 34em; margin-top: 8px; }
+.index .go { font-size: 15px; white-space: nowrap; }
+.index a:hover h3 { transform: translateX(14px); }
+.index a:hover .go { color: #13877F; }
+.index .thumb { grid-column: 2; margin-top: 18px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+@media (min-width: 900px) { .index .thumb { display: none; } }
+.peek { position: fixed; z-index: 20; width: 360px; aspect-ratio: 4 / 5; pointer-events: none; opacity: 0; transform: translate(-50%, -50%) scale(.96); transition: opacity .25s, transform .35s; object-fit: cover; left: 0; top: 0; }
+.peek.on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+@media (max-width: 899px), (hover: none) { .peek { display: none; } }
+
+/* ---------- Intertitle ---------- */
+.night { background: var(--deep); color: var(--on-dark); padding: var(--gap) 0; }
+.night .statement { max-width: 15em; font-size: clamp(34px, 4.6vw, 68px); }
+.cols { display: grid; gap: 40px; margin-top: clamp(64px, 9vw, 140px); }
+@media (min-width: 860px) { .cols { grid-template-columns: repeat(3, 1fr); gap: 56px; } }
+.cols h3 { font-size: 21px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 10px; }
+.cols p { color: var(--on-dark-soft); }
+
+/* ---------- Destinations mosaic ---------- */
+.dest { padding: var(--gap) 0 0; }
+.dest__head { display: grid; gap: 18px; margin-bottom: clamp(48px, 6vw, 80px); }
+.mosaic { display: grid; gap: 2px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) {
+  .mosaic { grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(220px, 23vw, 360px); }
+  .mosaic .d1 { grid-column: span 2; grid-row: span 2; }
+  .mosaic .d2 { grid-column: span 2; }
+  .mosaic .d6 { grid-column: span 2; }
+}
+.tile { position: relative; overflow: hidden; background: var(--deep); color: #fff; border: 0; padding: 0; text-align: left; font: inherit; cursor: pointer; min-height: 240px; }
+.tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s cubic-bezier(.2,.7,.1,1); }
+.tile:hover img { transform: scale(1.04); }
+.tile::after { content: ""; position: absolute; inset: 50% 0 0; background: linear-gradient(0deg, rgba(8,36,62,.7), rgba(8,36,62,0)); }
+.tile span { position: absolute; z-index: 1; left: 20px; right: 20px; bottom: 18px; display: grid; gap: 2px; }
+.tile strong { font-weight: 300; font-size: clamp(24px, 2.6vw, 38px); letter-spacing: -0.03em; line-height: 1.05; }
+.tile em { font-style: normal; font-size: 14px; color: rgba(255,255,255,.85); }
+.mosaic__note { padding: 20px var(--gutter) 0; font-size: 14px; }
+
+/* ---------- Cenote plane ---------- */
+.water { height: clamp(460px, 88vh, 980px); margin-top: var(--gap); }
+.water .plane__in { padding-top: clamp(48px, 7vw, 96px); }
+.water .statement { max-width: 11em; }
+
+/* ---------- Quote as a sentence ---------- */
+.quote { background: var(--arena); padding: var(--gap) 0; }
+.quote__grid { display: grid; gap: 64px; }
+@media (min-width: 1080px) { .quote__grid { grid-template-columns: 1.7fr 1fr; gap: 80px; } }
+.sentence { font-size: clamp(26px, 3.1vw, 44px); font-weight: 300; line-height: 1.75; letter-spacing: -0.03em; margin-top: 28px; }
+.sentence input, .sentence select {
+  font: inherit; color: var(--ink); letter-spacing: inherit; background: transparent; border: 0; border-bottom: 1px solid var(--ink);
+  border-radius: 0; padding: 0 2px; margin: 0 2px; line-height: 1.2; appearance: none; -webkit-appearance: none; vertical-align: baseline;
+}
+.sentence input::placeholder { color: #8F8778; }
+.sentence input:focus, .sentence select:focus { outline: none; border-bottom: 2px solid #13877F; }
+.sentence .w-name { width: 7.2em; } .sentence .w-place { width: 9em; } .sentence .w-num { width: 1.9em; text-align: center; }
+.sentence .w-date { width: 8.8em; } .sentence .w-time { width: 5.8em; } .sentence .w-flight { width: 5.2em; }
+.sentence select { padding-right: 4px; cursor: pointer; }
+.sentence .bad { border-bottom-color: #A3361C; }
+.q-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 48px; }
+.q-err { color: #A3361C; font-size: 15px; min-height: 1.4em; }
+.msg { align-self: start; border-top: 1px solid var(--ink); padding-top: 20px; }
+.msg pre { margin: 16px 0 0; white-space: pre-wrap; font: 400 15px/1.75 var(--font); background: var(--cal); padding: 24px; }
+.msg p { margin-top: 14px; font-size: 14px; color: var(--musgo); }
+.steps { list-style: none; padding: 0; margin-top: clamp(72px, 9vw, 120px); display: grid; border-top: 1px solid var(--linea); }
+@media (min-width: 860px) { .steps { grid-template-columns: repeat(3, 1fr); } .steps li + li { border-left: 1px solid var(--linea); padding-left: 28px; } }
+.steps li { padding: 24px 28px 24px 0; }
+.steps .n { font-size: 14px; color: var(--musgo); font-variant-numeric: tabular-nums; }
+.steps h3 { font-size: 22px; font-weight: 400; letter-spacing: -0.02em; margin: 6px 0 6px; }
+.steps p { font-size: 16px; color: var(--musgo); }
+.steps__note { margin-top: 24px; font-size: 14px; color: var(--musgo); }
+
+/* ---------- Contact plane ---------- */
+.contact { min-height: clamp(560px, 92vh, 1000px); }
+.contact::after { background: linear-gradient(180deg, rgba(8,36,62,.6) 0%, rgba(8,36,62,.25) 45%, rgba(8,36,62,.7) 100%); }
+.contact .plane__in { padding-top: clamp(56px, 8vw, 110px); padding-bottom: clamp(40px, 5vw, 64px); }
+.contact__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.contact dl { margin-top: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px 40px; padding-top: 56px; font-size: 16px; }
+.contact dt { font-size: 13px; color: rgba(255,255,255,.72); margin-bottom: 4px; }
+.contact dd { color: #fff; }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--foot); color: var(--on-dark); padding: 88px 0 36px; }
+.footer__top { display: grid; gap: 48px; }
+@media (min-width: 900px) { .footer__top { grid-template-columns: 1fr 3fr; } }
+.footer__brand img { width: 170px; height: auto; }
+.footer__brand p { margin-top: 16px; color: var(--on-dark-soft); font-size: 15px; max-width: 20em; }
+.footer__cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
+@media (min-width: 720px) { .footer__cols { grid-template-columns: repeat(4, 1fr); } }
+.footer h4 { margin: 0 0 14px; font-weight: 400; font-size: 15px; color: var(--on-dark-soft); }
+.footer ul { list-style: none; padding: 0; display: grid; gap: 10px; font-size: 15px; }
+.footer a:hover { color: var(--sol-2); }
+.footer__bot { margin-top: 72px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.14); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px 32px; font-size: 14px; color: var(--on-dark-soft); }
+.footer__bot button { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; padding: 0; }
+.footer__bot button[aria-pressed="true"] { color: var(--on-dark); }
+
+.wa-bubble { position: fixed; right: 18px; bottom: 18px; z-index: 26; display: flex; align-items: center; gap: 10px; }
+.wa-dot { width: 62px; height: 62px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(11,45,82,.25); position: relative; transition: transform .2s; }
+.wa-dot svg { width: 34px; height: 34px; }
+.wa-dot::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25D366; animation: ring 2.6s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(1.55); opacity: 0; } }
+.wa-bubble:hover .wa-dot { transform: scale(1.06); }
+.wa-bubble:active .wa-dot { transform: scale(.94); }
+.wa-tip { background: #fff; color: var(--ink); font-size: 14px; padding: 10px 14px; border-radius: 14px 14px 4px 14px; box-shadow: 0 6px 20px rgba(11,45,82,.16); white-space: nowrap; opacity: 0; transform: translateX(8px); transition: opacity .35s, transform .35s; pointer-events: none; }
+.wa-bubble:hover .wa-tip, .wa-bubble.tip .wa-tip { opacity: 1; transform: none; }
+@media (max-width: 480px) { .wa-dot { width: 56px; height: 56px; } .wa-tip { display: none; } }
+
+
+/* skip link */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 60; background: var(--cenote); color: var(--ink); padding: 10px 18px; border-radius: 999px; }
+.skip:focus { top: 12px; }
+
+/* micro-interactions */
+.btn:active { transform: scale(.97); }
+.btn { transition: background-color .3s, color .3s, border-color .3s, transform .15s; }
+.tile:active img { transform: scale(1.02); }
+.icon-btn { width: 40px; height: 40px; border-radius: 999px; border: 1px solid currentColor; background: none; color: inherit; cursor: pointer; display: grid; place-items: center; transition: background-color .25s, transform .15s; opacity: .85; }
+.icon-btn:hover { opacity: 1; background: rgba(127,127,127,.15); }
+.icon-btn:active { transform: scale(.92); }
+.icon-btn svg { width: 18px; height: 18px; }
+
+/* loader: a title card, only on the first visit of the session */
+.loader { position: fixed; inset: 0; z-index: 80; background: var(--cal); color: var(--ink); display: grid; place-content: center; justify-items: center; gap: 18px; transition: opacity .6s .1s, visibility 0s .7s; }
+.loader img { width: 220px; height: auto; animation: breathe 1.6s ease-in-out infinite; }
+.loader p { margin: 0; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; opacity: .8; }
+.loader i { display: block; width: 140px; height: 2px; background: var(--linea); overflow: hidden; position: relative; }
+.loader i::after { content: ""; position: absolute; inset: 0; background: var(--sol); transform: translateX(-100%); animation: load 1.2s cubic-bezier(.6,0,.2,1) infinite; }
+.loader.done { opacity: 0; visibility: hidden; }
+@keyframes breathe { 50% { transform: scale(1.04); } }
+@keyframes load { to { transform: translateX(100%); } }
+
+/* skeletons while photos arrive */
+.js .sk { background: linear-gradient(100deg, var(--arena) 30%, var(--cal) 50%, var(--arena) 70%); background-size: 300% 100%; animation: shimmer 1.4s linear infinite; }
+.js .sk img { opacity: 0; transition: opacity .7s; }
+.js .sk.ok { animation: none; background: var(--deep); }
+.js .sk.ok img { opacity: 1; }
+@keyframes shimmer { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+/* scroll reveals: content is never hidden, it settles into place */
+.js .rv { opacity: .25; transform: translateY(28px); transition: opacity 1s cubic-bezier(.2,.7,.1,1), transform 1s cubic-bezier(.2,.7,.1,1); }
+.js .rv.in { opacity: 1; transform: none; }
+.js .rv-d1 { transition-delay: .08s; } .js .rv-d2 { transition-delay: .16s; } .js .rv-d3 { transition-delay: .24s; }
+
+/* hero: slow push-in on the footage */
+.hero > video { animation: push 14s ease-out both; }
+@keyframes push { from { transform: scale(1.08); } to { transform: scale(1); } }
+.hero .cap, .hero__foot { animation: fade 1.2s .5s both; }
+@keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* back to top */
+.totop { position: fixed; right: 25px; bottom: 96px; z-index: 25; width: 48px; height: 48px; border-radius: 999px; border: 1px solid var(--linea); background: var(--cal); color: var(--ink); cursor: pointer; display: grid; place-items: center; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .35s, transform .35s; }
+.totop.on { opacity: 1; transform: none; pointer-events: auto; }
+.totop:hover { border-color: var(--ink); }
+.totop svg { width: 18px; height: 18px; }
+
+/* intertitle CTA */
+.night__cta { margin-top: clamp(48px, 6vw, 80px); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.night__cta span { color: var(--on-dark-soft); font-size: 15px; }
+
+/* testimonials */
+.reviews { padding: var(--gap) 0; border-top: 1px solid var(--linea); }
+.reviews__grid { display: grid; gap: 2px; margin-top: clamp(40px, 5vw, 72px); background: var(--linea); }
+@media (min-width: 860px) { .reviews__grid { grid-template-columns: repeat(3, 1fr); } }
+.review { background: var(--cal); padding: 32px 28px 28px; display: grid; gap: 18px; align-content: space-between; }
+.review blockquote { margin: 0; font-size: 20px; font-weight: 300; line-height: 1.45; letter-spacing: -0.02em; }
+.review footer { font-size: 14px; color: var(--musgo); }
+.review .stars { color: #C9932E; letter-spacing: 2px; font-size: 14px; }
+.reviews__empty { margin-top: 28px; padding: 28px; border: 1px dashed var(--linea); color: var(--musgo); max-width: 44em; }
+.reviews__cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* social */
+.social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.social a { width: 42px; height: 42px; border-radius: 999px; border: 1px solid rgba(241,236,227,.25); display: grid; place-items: center; transition: border-color .25s, background-color .25s, transform .15s; }
+.social a:hover { border-color: var(--sol); background: rgba(245,165,36,.18); }
+.social a:active { transform: scale(.92); }
+.social svg { width: 18px; height: 18px; }
+.social a.tbc { opacity: .45; }
+.social a.tbc::after { content: none; }
+
+/* field-level validation */
+.sentence .bad { border-bottom-color: #C2452A !important; animation: nudge .35s; }
+@keyframes nudge { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.q-err ul { margin: 6px 0 0; padding-left: 18px; }
+.q-ok { color: #13877F; font-size: 15px; }
+
+/* gentle exit nudge (desktop, once per session) */
+.nudge { position: fixed; left: 18px; bottom: 18px; z-index: 30; max-width: 340px; background: var(--deep); color: var(--on-dark); padding: 22px 22px 20px; display: grid; gap: 14px; transform: translateY(140%); transition: transform .5s cubic-bezier(.2,.7,.1,1); }
+.nudge.on { transform: none; }
+.nudge p { margin: 0; font-size: 16px; line-height: 1.45; }
+.nudge .row { display: flex; gap: 10px; align-items: center; }
+.nudge button.x { background: none; border: 0; color: var(--on-dark-soft); font: inherit; font-size: 14px; cursor: pointer; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js .rv { opacity: 1; transform: none; }
+  .js .sk img { opacity: 1; }
+}
+</style>
+</head>
+<body class="show-tbc">
+<a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="Tulum Sonrise Tours">
+      <img class="logo-w" src="assets/logo-blanco.svg" alt="Tulum Sonrise Tours" width="96" height="68">
+      <img class="logo-c" src="assets/logo.svg" alt="" width="96" height="68">
+    </a>
+    <div class="header__right">
+      <div class="lang" role="group" aria-label="Idioma · Language · Langue · Lingua"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/></svg><button type="button" data-lang="es" aria-pressed="true" lang="es" title="Español">ES</button><button type="button" data-lang="en" aria-pressed="false" lang="en" title="English">EN</button><button type="button" data-lang="fr" aria-pressed="false" lang="fr" title="Français">FR</button><button type="button" data-lang="pt" aria-pressed="false" lang="pt" title="Português">PT</button><button type="button" data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button></div>
+      <a class="btn btn--light" href="#cotizar"><span data-i18n="nav.quote">Cotizar</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Menú" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="menu__top"><span class="brand"><img src="assets/logo-blanco.svg" alt="" width="96" height="68"></span><button class="menu__close" id="menuClose" type="button" data-i18n="nav.close">Cerrar</button></div>
+  <nav>
+    <a href="#flota" data-i18n="nav.fleet">Transporte</a>
+    <a href="#servicios" data-i18n="nav.services">Servicios</a>
+    <a href="#destinos" data-i18n="nav.dest">Destinos</a>
+    <a href="#cotizar" data-i18n="nav.quote">Cotizar</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+  </nav>
+  <div class="menu__foot"><div class="lang lang--menu" role="group" aria-label="Idioma · Language"><button type="button" data-lang="es" aria-pressed="true" lang="es">Español</button><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button><button type="button" data-lang="fr" aria-pressed="false" lang="fr">Français</button><button type="button" data-lang="pt" aria-pressed="false" lang="pt">Português</button><button type="button" data-lang="it" aria-pressed="false" lang="it">Italiano</button></div><span data-phone>+52 984 232 4975</span><span>Tulum · Quintana Roo · México</span></div>
+</div>
+
+<main id="top">
+<!-- 1 · HERO: aerial of palm jungle meeting the Caribbean (Pexels video 3223480) -->
+<section class="plane hero" aria-labelledby="h1">
+  <video id="vHero" muted loop playsinline preload="metadata" poster="assets/media/v-hero-poster.jpg" aria-hidden="true"
+    data-hd="assets/media/v-hero-hd.mp4" data-sd="assets/media/v-hero-sd.mp4"></video>
+  <div class="wrap plane__in">
+    <p class="cap" data-i18n="hero.cap">Transporte turístico y privado</p>
+    <h1 class="display" id="h1" style="margin-top:22px">
+      <span><span data-i18n="hero.l1">Del aeropuerto</span></span>
+      <span><span data-i18n="hero.l2">al mar,</span></span>
+      <span><span data-i18n="hero.l3">por la selva.</span></span>
+    </h1>
+    <div class="hero__foot">
+      <div>
+        <p data-i18n="hero.sub">Traslados privados y tours en Tulum, Cancún y toda la Riviera Maya. Te esperamos con tu nombre y te llevamos directo.</p>
+        <div class="hero__cta">
+          <a class="btn btn--cenote" href="#" data-wa><span data-i18n="cta.wa">Cotiza por WhatsApp</span> <i>→</i></a>
+          <a class="btn btn--light" href="#destinos"><span data-i18n="cta.dest">Ver destinos</span></a>
+        </div>
+      </div>
+      <p class="coords">Tulum, Q. Roo<br>20.21° N · 87.46° O</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · STATEMENT -->
+<section class="intro" id="contenido" aria-labelledby="introT">
+  <div class="wrap">
+    <div class="intro__grid">
+      <p class="cap muted" data-i18n="intro.cap">Somos de aquí</p>
+      <h2 class="statement rv" id="introT" data-i18n="intro.t">Una empresa local de Tulum. Conocemos cada carretera, cada cenote y cada horario de llegada al aeropuerto.</h2>
+    </div>
+    <ul class="facts rv rv-d1">
+      <li><b data-i18n="f1.k">Choferes</b><span class="tbc" data-i18n="f1.v">Locales y bilingües</span></li>
+      <li><b data-i18n="f2.k">Unidades</b><span class="tbc" data-i18n="f2.v">Privadas y con aire acondicionado</span></li>
+      <li><b data-i18n="f3.k">Tu vuelo</b><span class="tbc" data-i18n="f3.v">Lo seguimos si se retrasa</span></li>
+      <li><b data-i18n="f4.k">Cotización</b><span data-i18n="f4.v">En minutos, por WhatsApp</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 · FLEET: SUV on a forest road (Pexels video 38403669) + three stills -->
+<section id="flota" aria-labelledby="fleetT">
+  <div class="plane fleet">
+    <video id="vFleet" muted loop playsinline preload="none" poster="assets/media/v-suv-poster.jpg" aria-hidden="true"
+      data-hd="assets/media/v-suv-hd.mp4" data-sd="assets/media/v-suv-sd.mp4"></video>
+    <div class="wrap plane__in">
+      <p class="cap" data-i18n="fleet.cap">Tu transporte</p>
+      <p class="statement rv" id="fleetT" data-i18n="fleet.t">Una unidad solo para ti. Sin paradas en otros hoteles.</p>
+    </div>
+  </div>
+  <div class="strip">
+    <figure class="sk"><img src="assets/media/van-aeropuerto.jpg" srcset="assets/media/van-aeropuerto-1280.jpg 1280w, assets/media/van-aeropuerto.jpg 2560w" sizes="(min-width:760px) 40vw, 100vw" alt="Camioneta blanca estacionada en la zona de llegadas de un aeropuerto" loading="lazy" decoding="async"><figcaption data-i18n="strip.1">Recepción en el aeropuerto</figcaption></figure>
+    <figure class="sk"><img src="assets/media/interior-van-1280.jpg" srcset="assets/media/interior-van-1280.jpg 1280w, assets/media/interior-van.jpg 2560w" sizes="(min-width:760px) 30vw, 100vw" alt="Interior de una van con asientos de piel y espacio para las piernas" loading="lazy" decoding="async"><figcaption data-i18n="strip.2">Interiores amplios para el equipaje</figcaption></figure>
+    <figure class="sk"><img src="assets/media/chofer-suburban-1280.jpg" srcset="assets/media/chofer-suburban-1280.jpg 1280w, assets/media/chofer-suburban.jpg 2560w" sizes="(min-width:760px) 30vw, 100vw" alt="Chofer de traje junto a una camioneta negra" loading="lazy" decoding="async"><figcaption data-i18n="strip.3">Chofer privado y puntual</figcaption></figure>
+  </div>
+</section>
+
+<!-- 4 · SERVICES as an index -->
+<section class="services" id="servicios" aria-labelledby="svT">
+  <div class="wrap">
+    <div class="services__head">
+      <h2 class="statement rv" id="svT" data-i18n="sv.t">Servicios</h2>
+      <p class="muted" style="max-width:26em" data-i18n="sv.sub">Elige uno y el cotizador se llena solo.</p>
+    </div>
+    <ol class="index">
+      <li class="rv"><a href="#cotizar" data-svc="airport" data-peek="assets/media/llegadas-1280.jpg"><span class="n">01</span><div><h3 data-i18n="s1.h">Traslados aeropuerto</h3><p data-i18n="s1.p">Cancún (CUN) y Tulum (TQO) a tu hotel, ida o viaje redondo.</p><img class="thumb" src="assets/media/llegadas-1280.jpg" alt="" loading="lazy" decoding="async"></div><span class="go" data-i18n="go">Cotizar →</span></a></li>
+      <li class="rv"><a href="#cotizar" data-svc="private" data-peek="assets/media/van-ejecutiva-1280.jpg"><span class="n">02</span><div><h3 data-i18n="s2.h">Transporte privado</h3><p data-i18n="s2.p">Entre hoteles, restaurantes y ciudades de la Riviera Maya, a la hora que lo necesites.</p><img class="thumb" src="assets/media/van-ejecutiva-1280.jpg" alt="" loading="lazy" decoding="async"></div><span class="go" data-i18n="go">Cotizar →</span></a></li>
+      <li class="rv"><a href="#cotizar" data-svc="tour" data-peek="assets/media/chichen-itza-1280.jpg"><span class="n">03</span><div><h3 data-i18n="s3.h">Tours y excursiones</h3><p data-i18n="s3.p">Chichén Itzá, Cobá, Tulum, Bacalar y cenotes con transporte de ida y vuelta.</p><img class="thumb" src="assets/media/chichen-itza-1280.jpg" alt="" loading="lazy" decoding="async"></div><span class="go" data-i18n="go">Cotizar →</span></a></li>
+      <li class="rv"><a href="#cotizar" data-svc="group" data-peek="assets/media/atardecer-1280.jpg"><span class="n">04</span><div><h3 data-i18n="s4.h">Grupos y eventos</h3><p data-i18n="s4.p">Bodas, retiros y viajes de empresa. Coordinamos varias unidades para tu grupo.</p><img class="thumb" src="assets/media/atardecer-1280.jpg" alt="" loading="lazy" decoding="async"></div><span class="go" data-i18n="go">Cotizar →</span></a></li>
+    </ol>
+  </div>
+  <img class="peek" id="peek" alt="" aria-hidden="true">
+</section>
+
+<!-- 5 · INTERTITLE -->
+<section class="night" aria-labelledby="nT">
+  <div class="wrap">
+    <h2 class="statement rv" id="nT" data-i18n="n.t">Llegas cansado de un vuelo. Nosotros nos encargamos del resto.</h2>
+    <div class="cols rv rv-d1">
+      <div><h3 data-i18n="n.1h">Te esperamos a la salida</h3><p data-i18n="n.1p">Tu chofer te recibe en llegadas con un letrero con tu nombre y te ayuda con las maletas.</p></div>
+      <div><h3 data-i18n="n.2h">Directo a tu destino</h3><p data-i18n="n.2p">Unidad privada para ti y tu grupo. Sin compartir el viaje y sin paradas que no pediste.</p></div>
+      <div><h3 data-i18n="n.3h">Tu regreso, coordinado</h3><p data-i18n="n.3p">Agendamos la vuelta al aeropuerto con tiempo para que no corras el último día.</p></div>
+    </div>
+    <div class="night__cta rv"><a class="btn btn--cenote" href="#cotizar"><span data-i18n="n.cta">Cotiza tu traslado</span> <i>→</i></a><span data-i18n="n.ctasub">Te respondemos por WhatsApp.</span></div>
+  </div>
+</section>
+
+<!-- 6 · DESTINATIONS mosaic -->
+<section class="dest" id="destinos" aria-labelledby="dT">
+  <div class="wrap dest__head">
+    <p class="cap muted" data-i18n="d.cap">Destinos</p>
+    <h2 class="statement rv" id="dT" data-i18n="d.t">Playa, selva, cenotes y ciudades mayas. Te llevamos a todos.</h2>
+  </div>
+  <div class="mosaic">
+    <button class="sk tile d1" type="button" data-dest="Tulum"><img src="assets/media/tulum.jpg" srcset="assets/media/tulum-1280.jpg 1280w, assets/media/tulum.jpg 2560w" sizes="(min-width:900px) 50vw, 50vw" alt="Playa de Tulum con agua turquesa bajo los acantilados de la zona arqueológica" loading="lazy" decoding="async"><span><strong>Tulum</strong><em class="tbc" data-i18n="d1">Playas y zona arqueológica · aprox. 10 min</em></span></button>
+    <button class="sk tile d2" type="button" data-dest="Chichén Itzá"><img src="assets/media/chichen-itza.jpg" srcset="assets/media/chichen-itza-1280.jpg 1280w, assets/media/chichen-itza.jpg 2560w" sizes="(min-width:900px) 50vw, 50vw" alt="Pirámide de Kukulcán en Chichén Itzá bajo cielo azul" loading="lazy" decoding="async"><span><strong>Chichén Itzá</strong><em class="tbc" data-i18n="d2">Maravilla del mundo · aprox. 2 h</em></span></button>
+    <button class="sk tile d3" type="button" data-dest="Cenotes"><img src="assets/media/cenote-1280.jpg" srcset="assets/media/cenote-1280.jpg 1280w, assets/media/cenote.jpg 2560w" sizes="(min-width:900px) 25vw, 50vw" alt="Cenote rodeado de lianas y vegetación" loading="lazy" decoding="async"><span><strong data-i18n="d.cenotes">Cenotes</strong><em class="tbc" data-i18n="d3">Aprox. 15 a 40 min</em></span></button>
+    <button class="sk tile d4" type="button" data-dest="Cobá"><img src="assets/media/coba-1280.jpg" srcset="assets/media/coba-1280.jpg 1280w, assets/media/coba.jpg 2560w" sizes="(min-width:900px) 25vw, 50vw" alt="Pirámide de Cobá rodeada de selva" loading="lazy" decoding="async"><span><strong>Cobá</strong><em class="tbc" data-i18n="d4">Pirámide en la selva · aprox. 45 min</em></span></button>
+    <button class="sk tile d5" type="button" data-dest="Bacalar"><img src="assets/media/bacalar-1280.jpg" srcset="assets/media/bacalar-1280.jpg 1280w, assets/media/bacalar.jpg 2560w" sizes="(min-width:900px) 25vw, 50vw" alt="Vista aérea de un muelle sobre la laguna de Bacalar" loading="lazy" decoding="async"><span><strong>Bacalar</strong><em class="tbc" data-i18n="d5">Laguna de siete colores · aprox. 2 h 30 min</em></span></button>
+    <button class="sk tile d6" type="button" data-dest="Playa del Carmen"><img src="assets/media/playa-del-carmen.jpg" srcset="assets/media/playa-del-carmen-1280.jpg 1280w, assets/media/playa-del-carmen.jpg 2560w" sizes="(min-width:900px) 50vw, 50vw" alt="Vista aérea de la playa de Playa del Carmen" loading="lazy" decoding="async"><span><strong>Playa del Carmen</strong><em class="tbc" data-i18n="d6">Quinta Avenida y playa · aprox. 50 min</em></span></button>
+    <button class="sk tile d7" type="button" data-dest="Cancún"><img src="assets/media/playa-palmeras-1280.jpg" srcset="assets/media/playa-palmeras-1280.jpg 1280w, assets/media/playa-palmeras.jpg 2560w" sizes="(min-width:900px) 25vw, 50vw" alt="Palmeras frente al mar turquesa del Caribe" loading="lazy" decoding="async"><span><strong>Cancún</strong><em class="tbc" data-i18n="d7">Zona hotelera · aprox. 1 h 45 min</em></span></button>
+  </div>
+  <p class="mosaic__note muted" data-i18n="d.note">Toca un destino y lo agregamos a tu cotización. Tiempos aproximados desde Tulum.</p>
+</section>
+
+<!-- 7 · WATER: cenote footage (Pexels video 19598423) -->
+<section class="plane water" aria-label="Cenote">
+  <video id="vWater" muted loop playsinline preload="none" poster="assets/media/v-cenote-poster.jpg" aria-hidden="true"
+    data-hd="assets/media/v-cenote-hd.mp4" data-sd="assets/media/v-cenote-sd.mp4"></video>
+  <div class="wrap plane__in"><p class="statement" data-i18n="water">Tú disfruta el agua. El camino lo conocemos.</p></div>
+</section>
+
+<!-- 8 · QUOTE as one sentence -->
+<section class="quote" id="cotizar" aria-labelledby="qT">
+  <div class="wrap">
+    <p class="cap muted" id="qT" data-i18n="q.cap">Cotiza tu viaje</p>
+    <div class="quote__grid">
+      <form id="qf" novalidate>
+        <p class="sentence">
+          <span data-i18n="q.a">Hola, soy</span>
+          <input class="w-name" id="name" name="name" autocomplete="name" data-i18n-ph="ph.name" placeholder="tu nombre" aria-label="Tu nombre">.
+          <span data-i18n="q.b">Necesito</span>
+          <select id="service" name="service" aria-label="Servicio">
+            <option value="airport" data-i18n="svc.airport">un traslado del aeropuerto</option>
+            <option value="private" data-i18n="svc.private">transporte privado</option>
+            <option value="tour" data-i18n="svc.tour">un tour</option>
+            <option value="group" data-i18n="svc.group">transporte para un grupo</option>
+          </select>
+          <span data-i18n="q.c">para</span>
+          <input class="w-num" id="pax" name="pax" type="number" min="1" max="60" value="2" inputmode="numeric" aria-label="Pasajeros">
+          <span data-i18n="q.d">personas con</span>
+          <input class="w-num" id="bags" name="bags" type="number" min="0" max="80" value="2" inputmode="numeric" aria-label="Maletas">
+          <span data-i18n="q.e">maletas, de</span>
+          <input class="w-place" id="from" name="from" list="places" autocomplete="off" data-i18n-ph="ph.from" placeholder="Aeropuerto CUN" aria-label="Origen">
+          <span data-i18n="q.f">a</span>
+          <input class="w-place" id="to" name="to" list="places" autocomplete="off" data-i18n-ph="ph.to" placeholder="mi hotel en Tulum" aria-label="Destino">
+          <span data-i18n="q.g">el</span>
+          <input class="w-date" id="date" name="date" type="date" aria-label="Fecha">
+          <span data-i18n="q.h">a las</span>
+          <input class="w-time" id="time" name="time" type="time" aria-label="Hora">.
+          <span data-i18n="q.i">Mi vuelo es</span>
+          <input class="w-flight" id="flight" name="flight" autocomplete="off" data-i18n-ph="ph.flight" placeholder="opcional" aria-label="Número de vuelo (opcional)">.
+        </p>
+        <datalist id="places">
+          <option value="Aeropuerto de Cancún (CUN)"></option><option value="Aeropuerto de Tulum (TQO)"></option>
+          <option value="Tulum"></option><option value="Playa del Carmen"></option><option value="Cancún, Zona Hotelera"></option>
+          <option value="Chichén Itzá"></option><option value="Cobá"></option><option value="Bacalar"></option><option value="Cenotes"></option>
+        </datalist>
+        <div class="q-actions">
+          <button class="btn btn--dark" type="submit"><span data-i18n="q.send">Enviar por WhatsApp</span> <i>→</i></button>
+          <span class="q-err" id="qErr" aria-live="polite"></span>
+        </div>
+      </form>
+      <aside class="msg" aria-live="polite">
+        <p class="cap muted" style="margin:0" data-i18n="msg.t">Así llega tu mensaje</p>
+        <pre id="preview"></pre>
+        <p data-i18n="msg.n">Se abre WhatsApp con el mensaje listo; tú decides si lo envías. La reserva se confirma cuando te respondemos por escrito.</p>
+      </aside>
+    </div>
+    <ol class="steps rv">
+      <li><span class="n">01</span><h3 data-i18n="st1.h">Nos escribes</h3><p data-i18n="st1.p">Con esta frase o directo por WhatsApp.</p></li>
+      <li><span class="n">02</span><h3 data-i18n="st2.h">Te confirmamos</h3><p data-i18n="st2.p">Precio, unidad y hora de recogida, por escrito.</p></li>
+      <li><span class="n">03</span><h3 data-i18n="st3.h">Te recogemos</h3><p data-i18n="st3.p">Te avisamos cuando tu chofer va en camino.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8b · TESTIMONIOS: se llenan desde la constante TESTIMONIOS (solo reseñas reales) -->
+<section class="reviews" id="opiniones" aria-labelledby="rvT" hidden>
+  <div class="wrap">
+    <p class="cap muted" data-i18n="rv.cap">Opiniones</p>
+    <h2 class="statement rv" id="rvT" style="margin-top:18px" data-i18n="rv.t">Lo que dicen quienes ya viajaron con nosotros.</h2>
+    <div class="reviews__grid" id="reviewsGrid"></div>
+    <p class="reviews__empty tbc" id="reviewsEmpty" hidden data-i18n="rv.empty">Aquí aparecerán las reseñas reales de tus clientes. Agrégalas en la constante TESTIMONIOS de este archivo (nombre, origen, texto y estrellas).</p>
+    <div class="reviews__cta"><a class="btn btn--dark" href="#" id="reviewLink" target="_blank" rel="noopener"><span data-i18n="rv.leave">Déjanos tu reseña en Google</span> <i>→</i></a></div>
+  </div>
+</section>
+
+<!-- 9 · CONTACT over the jungle road (Pexels video 27746173) -->
+<section class="plane contact" id="contacto" aria-labelledby="cT">
+  <video id="vRoad" muted loop playsinline preload="none" poster="assets/media/v-ruta-selva-poster.jpg" aria-hidden="true"
+    data-hd="assets/media/v-ruta-selva-hd.mp4" data-sd="assets/media/v-ruta-selva-sd.mp4"></video>
+  <div class="wrap plane__in">
+    <p class="cap" data-i18n="c.cap">Contacto</p>
+    <h2 class="display" id="cT" style="margin-top:18px" data-i18n="c.t">¿A dónde vamos?</h2>
+    <div class="contact__cta">
+      <a class="btn btn--cenote" href="#" data-wa><span data-i18n="c.wa">Escribir por WhatsApp</span> <i>→</i></a>
+      <a class="btn btn--light" href="#" data-tel><span data-i18n="c.call">Llamar</span></a>
+    </div>
+    <dl>
+      <div><dt data-i18n="c.ph">WhatsApp y teléfono</dt><dd data-phone>+52 984 232 4975</dd></div>
+      <div><dt data-i18n="c.mail">Correo</dt><dd class="tbc" data-email>hola@tulumsonrisetours.com</dd></div>
+      <div><dt data-i18n="c.hours">Horario</dt><dd class="tbc" data-i18n="c.hoursv">Todos los días, 7:00 a 22:00</dd></div>
+      <div><dt data-i18n="c.zone">Zona</dt><dd data-i18n="c.zonev">Tulum, Playa del Carmen, Cancún y toda la Riviera Maya</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand"><img src="assets/logo-blanco.svg" alt="Tulum Sonrise Tours" width="170" height="120" loading="lazy" decoding="async"><p data-i18n="ft.about">Transporte turístico y privado en la Riviera Maya, con base en Tulum.</p><div class="social" id="social" aria-label="Redes sociales"></div></div>
+      <div class="footer__cols">
+        <div><h4 data-i18n="nav.services">Servicios</h4><ul>
+          <li><a href="#servicios" data-i18n="s1.h">Traslados aeropuerto</a></li><li><a href="#servicios" data-i18n="s2.h">Transporte privado</a></li>
+          <li><a href="#servicios" data-i18n="s3.h">Tours y excursiones</a></li><li><a href="#servicios" data-i18n="s4.h">Grupos y eventos</a></li></ul></div>
+        <div><h4 data-i18n="nav.dest">Destinos</h4><ul>
+          <li><a href="#destinos">Tulum</a></li><li><a href="#destinos">Chichén Itzá</a></li><li><a href="#destinos">Cobá</a></li><li><a href="#destinos">Bacalar</a></li></ul></div>
+        <div><h4 data-i18n="ft.company">Empresa</h4><ul>
+          <li><a href="#flota" data-i18n="nav.fleet">Transporte</a></li><li><a href="#cotizar" data-i18n="nav.quote">Cotizar</a></li><li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li></ul></div>
+        <div><h4 data-i18n="ft.legal">Legal</h4><ul>
+          <li><a href="#" data-i18n="ft.privacy">Aviso de privacidad</a></li><li><a href="#" data-i18n="ft.terms">Términos del servicio</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer__bot">
+      <span>© 2027 Tulum Sonrise Tours · <span data-i18n="ft.credits">Fotos y video: Pexels</span></span>
+      <span class="langs"><button type="button" data-lang="es" aria-pressed="true" lang="es">Español</button> &nbsp;/&nbsp; <button type="button" data-lang="en" aria-pressed="false" lang="en">English</button> &nbsp;/&nbsp; <button type="button" data-lang="fr" aria-pressed="false" lang="fr">Français</button> &nbsp;/&nbsp; <button type="button" data-lang="pt" aria-pressed="false" lang="pt">Português</button> &nbsp;/&nbsp; <button type="button" data-lang="it" aria-pressed="false" lang="it">Italiano</button></span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" id="totop" type="button" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<aside class="nudge" id="nudge" aria-live="polite" hidden><p data-i18n="nd.t">¿Te ayudamos con tu traslado? Te respondemos en minutos por WhatsApp.</p><div class="row"><a class="btn btn--cenote" href="#" data-wa><span data-i18n="nd.go">Escribir ahora</span></a><button class="x" type="button" id="nudgeX" data-i18n="nd.x">No, gracias</button></div></aside>
+<a class="wa-bubble" id="fab" href="#" data-wa aria-label="WhatsApp"><span class="wa-tip" data-i18n="wa.tip">¿Cotizamos tu viaje?</span><span class="wa-dot"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3.2C8.94 3.2 3.2 8.94 3.2 16c0 2.3.62 4.55 1.78 6.52L3.2 28.8l6.43-1.69A12.74 12.74 0 0 0 16 28.8c7.06 0 12.8-5.74 12.8-12.8S23.06 3.2 16 3.2Zm0 23.27c-2.01 0-3.98-.54-5.7-1.56l-.41-.24-3.81 1 1.02-3.72-.27-.43A10.47 10.47 0 1 1 16 26.47Z"/><path fill="currentColor" d="M21.86 18.47c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.72.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.14 3.08 1.3 3.3c.16.21 2.25 3.43 5.45 4.81.76.33 1.35.52 1.82.67.76.24 1.46.21 2.01.13.61-.09 1.89-.77 2.15-1.52.27-.74.27-1.38.19-1.52-.08-.13-.29-.21-.61-.37Z"/></svg></span></a>
+
+<script>
+/* ============ DATOS DEL NEGOCIO — [CONFIRMAR] ============ */
+const WHATSAPP_NUMBER = "529842324975";   // +52 1 984 232 4975
+const PHONE = "+52 984 232 4975";
+const EMAIL = "hola@tulumsonrisetours.com";
+const SHOW_PLACEHOLDERS = true;   // false cuando los datos sean reales
+// Redes sociales: pega la URL completa; las vacías no se muestran (con SHOW_PLACEHOLDERS se ven tenues)
+const SOCIAL = { instagram: "", facebook: "", tiktok: "", tripadvisor: "", google: "" };
+// Enlace para que los clientes dejen reseña (Google Business Profile → "Pedir reseñas")
+const REVIEW_URL = "";
+// Solo reseñas reales, copiadas con permiso. Ejemplo de formato:
+// { name: "Ana M.", from: "Monterrey", stars: 5, es: "Texto en español", en: "Text in English" }
+const TESTIMONIOS = [];
+/* ========================================================= */
+
+if (!SHOW_PLACEHOLDERS) document.body.classList.remove("show-tbc");
+document.querySelectorAll("[data-phone]").forEach(e => e.textContent = PHONE);
+document.querySelectorAll("[data-email]").forEach(e => e.textContent = EMAIL);
+document.querySelectorAll("[data-tel]").forEach(a => a.href = "tel:" + PHONE.replace(/\s/g, ""));
+
+const I18N = {
+ es: {
+  "wa.tip":"¿Cotizamos tu viaje?",
+  "skip":"Saltar al contenido","n.cta":"Cotiza tu traslado","n.ctasub":"Te respondemos por WhatsApp.",
+  "rv.cap":"Opiniones","rv.t":"Lo que dicen quienes ya viajaron con nosotros.","rv.empty":"Aquí aparecerán las reseñas reales de tus clientes. Agrégalas en la constante TESTIMONIOS de este archivo (nombre, origen, texto y estrellas).","rv.leave":"Déjanos tu reseña en Google",
+  "nd.t":"¿Te ayudamos con tu traslado? Te respondemos en minutos por WhatsApp.","nd.go":"Escribir ahora","nd.x":"No, gracias","top":"Volver arriba",
+  "e.name":"tu nombre","e.from":"de dónde sales","e.to":"a dónde vas","e.date":"la fecha","e.past":"La fecha ya pasó; elige hoy o un día futuro.","e.pax":"Pasajeros debe ser entre 1 y 60.","e.bags":"Maletas debe ser entre 0 y 80.","e.missing":"Falta:","q.ok":"Listo. Abrimos WhatsApp con tu mensaje.",
+  "loader":"Tulum · Riviera Maya",
+  "brand.sub":"Transporte privado · Riviera Maya","nav.quote":"Cotizar","nav.close":"Cerrar","nav.fleet":"Transporte","nav.services":"Servicios","nav.dest":"Destinos","nav.contact":"Contacto",
+  "hero.cap":"Transporte turístico y privado","hero.l1":"Del aeropuerto","hero.l2":"al mar,","hero.l3":"por la selva.",
+  "hero.sub":"Traslados privados y tours en Tulum, Cancún y toda la Riviera Maya. Te esperamos con tu nombre y te llevamos directo.",
+  "cta.wa":"Cotiza por WhatsApp","cta.dest":"Ver destinos",
+  "intro.cap":"Somos de aquí","intro.t":"Una empresa local de Tulum. Conocemos cada carretera, cada cenote y cada horario de llegada al aeropuerto.",
+  "f1.k":"Choferes","f1.v":"Locales y bilingües","f2.k":"Unidades","f2.v":"Privadas y con aire acondicionado","f3.k":"Tu vuelo","f3.v":"Lo seguimos si se retrasa","f4.k":"Cotización","f4.v":"En minutos, por WhatsApp",
+  "fleet.cap":"Tu transporte","fleet.t":"Una unidad solo para ti. Sin paradas en otros hoteles.",
+  "strip.1":"Recepción en el aeropuerto","strip.2":"Interiores amplios para el equipaje","strip.3":"Chofer privado y puntual",
+  "sv.t":"Servicios","sv.sub":"Elige uno y el cotizador se llena solo.","go":"Cotizar →",
+  "s1.h":"Traslados aeropuerto","s1.p":"Cancún (CUN) y Tulum (TQO) a tu hotel, ida o viaje redondo.",
+  "s2.h":"Transporte privado","s2.p":"Entre hoteles, restaurantes y ciudades de la Riviera Maya, a la hora que lo necesites.",
+  "s3.h":"Tours y excursiones","s3.p":"Chichén Itzá, Cobá, Tulum, Bacalar y cenotes con transporte de ida y vuelta.",
+  "s4.h":"Grupos y eventos","s4.p":"Bodas, retiros y viajes de empresa. Coordinamos varias unidades para tu grupo.",
+  "n.t":"Llegas cansado de un vuelo. Nosotros nos encargamos del resto.",
+  "n.1h":"Te esperamos a la salida","n.1p":"Tu chofer te recibe en llegadas con un letrero con tu nombre y te ayuda con las maletas.",
+  "n.2h":"Directo a tu destino","n.2p":"Unidad privada para ti y tu grupo. Sin compartir el viaje y sin paradas que no pediste.",
+  "n.3h":"Tu regreso, coordinado","n.3p":"Agendamos la vuelta al aeropuerto con tiempo para que no corras el último día.",
+  "d.cap":"Destinos","d.t":"Playa, selva, cenotes y ciudades mayas. Te llevamos a todos.","d.cenotes":"Cenotes",
+  "d1":"Playas y zona arqueológica · aprox. 10 min","d2":"Maravilla del mundo · aprox. 2 h","d3":"Aprox. 15 a 40 min","d4":"Pirámide en la selva · aprox. 45 min",
+  "d5":"Laguna de siete colores · aprox. 2 h 30 min","d6":"Quinta Avenida y playa · aprox. 50 min","d7":"Zona hotelera · aprox. 1 h 45 min",
+  "d.note":"Toca un destino y lo agregamos a tu cotización. Tiempos aproximados desde Tulum.",
+  "water":"Tú disfruta el agua. El camino lo conocemos.",
+  "q.cap":"Cotiza tu viaje","q.a":"Hola, soy","q.b":"Necesito","q.c":"para","q.d":"personas con","q.e":"maletas, de","q.f":"a","q.g":"el","q.h":"a las","q.i":"Mi vuelo es",
+  "svc.airport":"un traslado del aeropuerto","svc.private":"transporte privado","svc.tour":"un tour","svc.group":"transporte para un grupo",
+  "ph.name":"tu nombre","ph.from":"Aeropuerto CUN","ph.to":"mi hotel en Tulum","ph.flight":"opcional",
+  "q.send":"Enviar por WhatsApp","q.err":"Completa tu nombre, de dónde sales, a dónde vas y la fecha.",
+  "msg.t":"Así llega tu mensaje","msg.n":"Se abre WhatsApp con el mensaje listo; tú decides si lo envías. La reserva se confirma cuando te respondemos por escrito.",
+  "st1.h":"Nos escribes","st1.p":"Con esta frase o directo por WhatsApp.","st2.h":"Te confirmamos","st2.p":"Precio, unidad y hora de recogida, por escrito.","st3.h":"Te recogemos","st3.p":"Te avisamos cuando tu chofer va en camino.",
+  "c.cap":"Contacto","c.t":"¿A dónde vamos?","c.wa":"Escribir por WhatsApp","c.call":"Llamar","c.ph":"WhatsApp y teléfono","c.mail":"Correo","c.hours":"Horario","c.hoursv":"Todos los días, 7:00 a 22:00","c.zone":"Zona","c.zonev":"Tulum, Playa del Carmen, Cancún y toda la Riviera Maya",
+  "ft.about":"Transporte turístico y privado en la Riviera Maya, con base en Tulum.","ft.company":"Empresa","ft.legal":"Legal","ft.privacy":"Aviso de privacidad","ft.terms":"Términos del servicio","ft.credits":"Fotos y video: Pexels",
+  "m.hi":"Hola, quiero cotizar con Tulum Sonrise Tours.","m.svc":"Servicio","m.from":"Origen","m.to":"Destino","m.date":"Fecha","m.time":"Hora","m.pax":"Pasajeros","m.bags":"Maletas","m.flight":"Vuelo","m.name":"Nombre",
+  "m.svc.airport":"Traslado aeropuerto","m.svc.private":"Transporte privado","m.svc.tour":"Tour","m.svc.group":"Grupo o evento",
+  "wa.generic":"Hola, quiero cotizar un traslado con Tulum Sonrise Tours."
+ },
+ en: {
+  "wa.tip":"Need a ride? Chat with us",
+  "skip":"Skip to content","n.cta":"Get a transfer quote","n.ctasub":"We reply on WhatsApp.",
+  "rv.cap":"Reviews","rv.t":"What travelers who rode with us say.","rv.empty":"Your customers' real reviews will appear here. Add them to the TESTIMONIOS constant in this file (name, origin, text and stars).","rv.leave":"Leave us a Google review",
+  "nd.t":"Need help with your ride? We reply in minutes on WhatsApp.","nd.go":"Message us now","nd.x":"No, thanks","top":"Back to top",
+  "e.name":"your name","e.from":"where you're starting","e.to":"where you're going","e.date":"the date","e.past":"That date has passed; pick today or a future day.","e.pax":"Passengers must be between 1 and 60.","e.bags":"Suitcases must be between 0 and 80.","e.missing":"Missing:","q.ok":"Done. Opening WhatsApp with your message.",
+  "loader":"Tulum · Riviera Maya",
+  "brand.sub":"Private transportation · Riviera Maya","nav.quote":"Get a quote","nav.close":"Close","nav.fleet":"Vehicles","nav.services":"Services","nav.dest":"Destinations","nav.contact":"Contact",
+  "hero.cap":"Tourist & private transportation","hero.l1":"From the airport","hero.l2":"to the sea,","hero.l3":"through the jungle.",
+  "hero.sub":"Private transfers and tours in Tulum, Cancún and across the Riviera Maya. We meet you with your name on a sign and take you straight there.",
+  "cta.wa":"Get a quote on WhatsApp","cta.dest":"See destinations",
+  "intro.cap":"We're local","intro.t":"A local Tulum company. We know every road, every cenote and every airport arrival time.",
+  "f1.k":"Drivers","f1.v":"Local and bilingual","f2.k":"Vehicles","f2.v":"Private and air-conditioned","f3.k":"Your flight","f3.v":"We track it if it's delayed","f4.k":"Quotes","f4.v":"In minutes, on WhatsApp",
+  "fleet.cap":"Your ride","fleet.t":"A vehicle just for you. No stops at other hotels.",
+  "strip.1":"Airport pickup","strip.2":"Roomy interiors for your luggage","strip.3":"A private, punctual driver",
+  "sv.t":"Services","sv.sub":"Pick one and the quote form fills itself in.","go":"Get a quote →",
+  "s1.h":"Airport transfers","s1.p":"Cancún (CUN) and Tulum (TQO) to your hotel, one way or round trip.",
+  "s2.h":"Private transportation","s2.p":"Between hotels, restaurants and towns in the Riviera Maya, whenever you need it.",
+  "s3.h":"Tours and day trips","s3.p":"Chichén Itzá, Cobá, Tulum, Bacalar and cenotes with round-trip transportation.",
+  "s4.h":"Groups and events","s4.p":"Weddings, retreats and company trips. We coordinate several vehicles for your group.",
+  "n.t":"You land tired from a flight. We take care of the rest.",
+  "n.1h":"We meet you at arrivals","n.1p":"Your driver waits at arrivals with a sign with your name and helps with your luggage.",
+  "n.2h":"Straight to your destination","n.2p":"A private vehicle for you and your group. No shared rides, no stops you didn't ask for.",
+  "n.3h":"Your return, arranged","n.3p":"We schedule your ride back to the airport with time to spare, so your last day isn't a rush.",
+  "d.cap":"Destinations","d.t":"Beaches, jungle, cenotes and Maya cities. We'll take you to all of them.","d.cenotes":"Cenotes",
+  "d1":"Beaches and ruins · approx. 10 min","d2":"World wonder · approx. 2 h","d3":"Approx. 15 to 40 min","d4":"Pyramid in the jungle · approx. 45 min",
+  "d5":"Lagoon of seven colors · approx. 2 h 30 min","d6":"Fifth Avenue and beach · approx. 50 min","d7":"Hotel zone · approx. 1 h 45 min",
+  "d.note":"Tap a destination and we'll add it to your quote. Approximate times from Tulum.",
+  "water":"You enjoy the water. We know the road.",
+  "q.cap":"Get a quote","q.a":"Hi, I'm","q.b":"I need","q.c":"for","q.d":"people with","q.e":"suitcases, from","q.f":"to","q.g":"on","q.h":"at","q.i":"My flight is",
+  "svc.airport":"an airport transfer","svc.private":"private transportation","svc.tour":"a tour","svc.group":"transportation for a group",
+  "ph.name":"your name","ph.from":"Cancún Airport","ph.to":"my hotel in Tulum","ph.flight":"optional",
+  "q.send":"Send on WhatsApp","q.err":"Add your name, where you're starting, where you're going and the date.",
+  "msg.t":"How your message arrives","msg.n":"WhatsApp opens with the message ready; you decide whether to send it. Your booking is confirmed once we reply in writing.",
+  "st1.h":"You message us","st1.p":"With this sentence or directly on WhatsApp.","st2.h":"We confirm","st2.p":"Price, vehicle and pickup time, in writing.","st3.h":"We pick you up","st3.p":"We let you know when your driver is on the way.",
+  "c.cap":"Contact","c.t":"Where are we going?","c.wa":"Message us on WhatsApp","c.call":"Call","c.ph":"WhatsApp and phone","c.mail":"Email","c.hours":"Hours","c.hoursv":"Every day, 7:00 am to 10:00 pm","c.zone":"Area","c.zonev":"Tulum, Playa del Carmen, Cancún and the whole Riviera Maya",
+  "ft.about":"Tourist and private transportation in the Riviera Maya, based in Tulum.","ft.company":"Company","ft.legal":"Legal","ft.privacy":"Privacy notice","ft.terms":"Terms of service","ft.credits":"Photos and video: Pexels",
+  "m.hi":"Hi, I'd like a quote from Tulum Sonrise Tours.","m.svc":"Service","m.from":"From","m.to":"To","m.date":"Date","m.time":"Time","m.pax":"Passengers","m.bags":"Suitcases","m.flight":"Flight","m.name":"Name",
+  "m.svc.airport":"Airport transfer","m.svc.private":"Private transportation","m.svc.tour":"Tour","m.svc.group":"Group or event",
+  "wa.generic":"Hi, I'd like a transfer quote from Tulum Sonrise Tours."
+ },
+ fr: {
+  "wa.tip":"Un trajet ? Écrivez-nous",
+  "skip":"Aller au contenu",
+  "n.cta":"Demander un devis",
+  "n.ctasub":"Nous répondons sur WhatsApp.",
+  "rv.cap":"Avis",
+  "rv.t":"Ce que disent ceux qui ont déjà voyagé avec nous.",
+  "rv.empty":"Les vrais avis de vos clients apparaîtront ici. Ajoutez-les dans la constante TESTIMONIOS de ce fichier (nom, provenance, texte et étoiles).",
+  "rv.leave":"Laissez-nous un avis Google",
+  "nd.t":"Besoin d'aide pour votre transfert ? Nous répondons en quelques minutes sur WhatsApp.",
+  "nd.go":"Écrire maintenant",
+  "nd.x":"Non, merci",
+  "top":"Retour en haut",
+  "e.name":"votre nom",
+  "e.from":"votre point de départ",
+  "e.to":"votre destination",
+  "e.date":"la date",
+  "e.past":"Cette date est passée ; choisissez aujourd'hui ou un jour futur.",
+  "e.pax":"Le nombre de passagers doit être entre 1 et 60.",
+  "e.bags":"Le nombre de valises doit être entre 0 et 80.",
+  "e.missing":"Il manque :",
+  "q.ok":"C'est prêt. Nous ouvrons WhatsApp avec votre message.",
+  "loader":"Tulum · Riviera Maya",
+  "brand.sub":"Transport privé · Riviera Maya",
+  "nav.quote":"Devis",
+  "nav.close":"Fermer",
+  "nav.fleet":"Véhicules",
+  "nav.services":"Services",
+  "nav.dest":"Destinations",
+  "nav.contact":"Contact",
+  "hero.cap":"Transport touristique et privé",
+  "hero.l1":"De l'aéroport",
+  "hero.l2":"à la mer,",
+  "hero.l3":"à travers la jungle.",
+  "hero.sub":"Transferts privés et excursions à Tulum, Cancún et dans toute la Riviera Maya. Nous vous attendons avec votre nom et vous emmenons directement.",
+  "cta.wa":"Devis sur WhatsApp",
+  "cta.dest":"Voir les destinations",
+  "intro.cap":"Nous sommes d'ici",
+  "intro.t":"Une entreprise locale de Tulum. Nous connaissons chaque route, chaque cenote et chaque horaire d'arrivée à l'aéroport.",
+  "f1.k":"Chauffeurs",
+  "f1.v":"Locaux et bilingues",
+  "f2.k":"Véhicules",
+  "f2.v":"Privés et climatisés",
+  "f3.k":"Votre vol",
+  "f3.v":"Nous le suivons en cas de retard",
+  "f4.k":"Devis",
+  "f4.v":"En quelques minutes, sur WhatsApp",
+  "fleet.cap":"Votre transport",
+  "fleet.t":"Un véhicule rien que pour vous. Aucun arrêt dans d'autres hôtels.",
+  "strip.1":"Accueil à l'aéroport",
+  "strip.2":"Intérieurs spacieux pour vos bagages",
+  "strip.3":"Chauffeur privé et ponctuel",
+  "sv.t":"Services",
+  "sv.sub":"Choisissez-en un et le formulaire se remplit tout seul.",
+  "go":"Devis →",
+  "s1.h":"Transferts aéroport",
+  "s1.p":"De Cancún (CUN) et Tulum (TQO) à votre hôtel, aller simple ou aller-retour.",
+  "s2.h":"Transport privé",
+  "s2.p":"Entre hôtels, restaurants et villes de la Riviera Maya, à l'heure qui vous convient.",
+  "s3.h":"Excursions",
+  "s3.p":"Chichén Itzá, Cobá, Tulum, Bacalar et cenotes avec transport aller-retour.",
+  "s4.h":"Groupes et événements",
+  "s4.p":"Mariages, retraites et voyages d'entreprise. Nous coordonnons plusieurs véhicules pour votre groupe.",
+  "n.t":"Vous arrivez fatigué d'un vol. Nous nous occupons du reste.",
+  "n.1h":"Nous vous attendons à la sortie",
+  "n.1p":"Votre chauffeur vous accueille aux arrivées avec une pancarte à votre nom et vous aide avec vos valises.",
+  "n.2h":"Directement à destination",
+  "n.2p":"Un véhicule privé pour vous et votre groupe. Sans trajet partagé ni arrêts imprévus.",
+  "n.3h":"Votre retour, organisé",
+  "n.3p":"Nous planifions votre retour à l'aéroport avec de la marge pour que votre dernier jour soit sans stress.",
+  "d.cap":"Destinations",
+  "d.t":"Plages, jungle, cenotes et cités mayas. Nous vous emmenons partout.",
+  "d.cenotes":"Cenotes",
+  "d1":"Plages et site archéologique · env. 10 min",
+  "d2":"Merveille du monde · env. 2 h",
+  "d3":"Env. 15 à 40 min",
+  "d4":"Pyramide dans la jungle · env. 45 min",
+  "d5":"Lagune aux sept couleurs · env. 2 h 30",
+  "d6":"Cinquième Avenue et plage · env. 50 min",
+  "d7":"Zone hôtelière · env. 1 h 45",
+  "d.note":"Touchez une destination pour l'ajouter à votre devis. Temps approximatifs depuis Tulum.",
+  "water":"Profitez de l'eau. Nous connaissons la route.",
+  "q.cap":"Demandez votre devis",
+  "q.a":"Bonjour, je suis",
+  "q.b":"J'ai besoin",
+  "q.c":"pour",
+  "q.d":"personnes avec",
+  "q.e":"valises, de",
+  "q.f":"à",
+  "q.g":"le",
+  "q.h":"à",
+  "q.i":"Mon numéro de vol est",
+  "svc.airport":"d'un transfert depuis l'aéroport",
+  "svc.private":"d'un transport privé",
+  "svc.tour":"d'une excursion",
+  "svc.group":"d'un transport pour un groupe",
+  "ph.name":"votre nom",
+  "ph.from":"Aéroport CUN",
+  "ph.to":"mon hôtel à Tulum",
+  "ph.flight":"facultatif",
+  "q.send":"Envoyer sur WhatsApp",
+  "q.err":"Indiquez votre nom, votre départ, votre destination et la date.",
+  "msg.t":"Votre message ressemblera à ceci",
+  "msg.n":"WhatsApp s'ouvre avec le message prêt ; c'est vous qui décidez de l'envoyer. La réservation est confirmée lorsque nous vous répondons par écrit.",
+  "st1.h":"Vous nous écrivez",
+  "st1.p":"Avec cette phrase ou directement sur WhatsApp.",
+  "st2.h":"Nous confirmons",
+  "st2.p":"Prix, véhicule et heure de prise en charge, par écrit.",
+  "st3.h":"Nous venons vous chercher",
+  "st3.p":"Nous vous prévenons quand votre chauffeur est en route.",
+  "c.cap":"Contact",
+  "c.t":"On va où ?",
+  "c.wa":"Écrire sur WhatsApp",
+  "c.call":"Appeler",
+  "c.ph":"WhatsApp et téléphone",
+  "c.mail":"E-mail",
+  "c.hours":"Horaires",
+  "c.hoursv":"Tous les jours, de 7 h à 22 h",
+  "c.zone":"Zone",
+  "c.zonev":"Tulum, Playa del Carmen, Cancún et toute la Riviera Maya",
+  "ft.about":"Transport touristique et privé dans la Riviera Maya, basé à Tulum.",
+  "ft.company":"Entreprise",
+  "ft.legal":"Mentions légales",
+  "ft.privacy":"Politique de confidentialité",
+  "ft.terms":"Conditions du service",
+  "ft.credits":"Photos et vidéo : Pexels",
+  "m.hi":"Bonjour, je souhaite un devis de Tulum Sonrise Tours.",
+  "m.svc":"Service",
+  "m.from":"Départ",
+  "m.to":"Destination",
+  "m.date":"Date",
+  "m.time":"Heure",
+  "m.pax":"Passagers",
+  "m.bags":"Valises",
+  "m.flight":"Vol",
+  "m.name":"Nom",
+  "m.svc.airport":"Transfert aéroport",
+  "m.svc.private":"Transport privé",
+  "m.svc.tour":"Excursion",
+  "m.svc.group":"Groupe ou événement",
+  "wa.generic":"Bonjour, je souhaite un devis de transfert de Tulum Sonrise Tours."
+ },
+ pt: {
+  "wa.tip":"Vamos cotar sua viagem?",
+  "skip":"Pular para o conteúdo",
+  "n.cta":"Peça seu orçamento",
+  "n.ctasub":"Respondemos pelo WhatsApp.",
+  "rv.cap":"Avaliações",
+  "rv.t":"O que dizem os viajantes que já foram com a gente.",
+  "rv.empty":"Aqui vão aparecer as avaliações reais dos seus clientes. Adicione-as na constante TESTIMONIOS deste arquivo (nome, origem, texto e estrelas).",
+  "rv.leave":"Deixe sua avaliação no Google",
+  "nd.t":"Quer ajuda com seu traslado? Respondemos em minutos pelo WhatsApp.",
+  "nd.go":"Escrever agora",
+  "nd.x":"Não, obrigado",
+  "top":"Voltar ao topo",
+  "e.name":"seu nome",
+  "e.from":"de onde você sai",
+  "e.to":"para onde você vai",
+  "e.date":"a data",
+  "e.past":"Essa data já passou; escolha hoje ou um dia futuro.",
+  "e.pax":"Passageiros deve ser entre 1 e 60.",
+  "e.bags":"Malas deve ser entre 0 e 80.",
+  "e.missing":"Falta:",
+  "q.ok":"Pronto. Abrimos o WhatsApp com sua mensagem.",
+  "loader":"Tulum · Riviera Maya",
+  "brand.sub":"Transporte privado · Riviera Maya",
+  "nav.quote":"Orçamento",
+  "nav.close":"Fechar",
+  "nav.fleet":"Veículos",
+  "nav.services":"Serviços",
+  "nav.dest":"Destinos",
+  "nav.contact":"Contato",
+  "hero.cap":"Transporte turístico e privado",
+  "hero.l1":"Do aeroporto",
+  "hero.l2":"ao mar,",
+  "hero.l3":"pela selva.",
+  "hero.sub":"Traslados privados e passeios em Tulum, Cancún e em toda a Riviera Maya. Esperamos você com seu nome e levamos direto ao destino.",
+  "cta.wa":"Orçamento pelo WhatsApp",
+  "cta.dest":"Ver destinos",
+  "intro.cap":"Somos daqui",
+  "intro.t":"Uma empresa local de Tulum. Conhecemos cada estrada, cada cenote e cada horário de chegada no aeroporto.",
+  "f1.k":"Motoristas",
+  "f1.v":"Locais e bilíngues",
+  "f2.k":"Veículos",
+  "f2.v":"Privados e com ar-condicionado",
+  "f3.k":"Seu voo",
+  "f3.v":"Acompanhamos se atrasar",
+  "f4.k":"Orçamento",
+  "f4.v":"Em minutos, pelo WhatsApp",
+  "fleet.cap":"Seu transporte",
+  "fleet.t":"Um veículo só para você. Sem paradas em outros hotéis.",
+  "strip.1":"Recepção no aeroporto",
+  "strip.2":"Interiores amplos para a bagagem",
+  "strip.3":"Motorista particular e pontual",
+  "sv.t":"Serviços",
+  "sv.sub":"Escolha um e o formulário se preenche sozinho.",
+  "go":"Orçamento →",
+  "s1.h":"Traslados aeroporto",
+  "s1.p":"De Cancún (CUN) e Tulum (TQO) até seu hotel, só ida ou ida e volta.",
+  "s2.h":"Transporte privado",
+  "s2.p":"Entre hotéis, restaurantes e cidades da Riviera Maya, no horário que você precisar.",
+  "s3.h":"Passeios e excursões",
+  "s3.p":"Chichén Itzá, Cobá, Tulum, Bacalar e cenotes com transporte de ida e volta.",
+  "s4.h":"Grupos e eventos",
+  "s4.p":"Casamentos, retiros e viagens corporativas. Coordenamos vários veículos para o seu grupo.",
+  "n.t":"Você chega cansado do voo. Nós cuidamos do resto.",
+  "n.1h":"Esperamos você na saída",
+  "n.1p":"Seu motorista recebe você no desembarque com uma placa com seu nome e ajuda com as malas.",
+  "n.2h":"Direto ao destino",
+  "n.2p":"Veículo privado para você e seu grupo. Sem dividir a viagem e sem paradas que você não pediu.",
+  "n.3h":"Sua volta, organizada",
+  "n.3p":"Agendamos o retorno ao aeroporto com folga para você não correr no último dia.",
+  "d.cap":"Destinos",
+  "d.t":"Praia, selva, cenotes e cidades maias. Levamos você a todos.",
+  "d.cenotes":"Cenotes",
+  "d1":"Praias e sítio arqueológico · aprox. 10 min",
+  "d2":"Maravilha do mundo · aprox. 2 h",
+  "d3":"Aprox. 15 a 40 min",
+  "d4":"Pirâmide na selva · aprox. 45 min",
+  "d5":"Lagoa das sete cores · aprox. 2 h 30 min",
+  "d6":"Quinta Avenida e praia · aprox. 50 min",
+  "d7":"Zona hoteleira · aprox. 1 h 45 min",
+  "d.note":"Toque em um destino e o adicionamos ao seu orçamento. Tempos aproximados a partir de Tulum.",
+  "water":"Você aproveita a água. A estrada a gente conhece.",
+  "q.cap":"Peça seu orçamento",
+  "q.a":"Olá, sou",
+  "q.b":"Preciso de",
+  "q.c":"para",
+  "q.d":"pessoas com",
+  "q.e":"malas, de",
+  "q.f":"para",
+  "q.g":"no dia",
+  "q.h":"às",
+  "q.i":"Meu voo é",
+  "svc.airport":"um traslado do aeroporto",
+  "svc.private":"transporte privado",
+  "svc.tour":"um passeio",
+  "svc.group":"transporte para um grupo",
+  "ph.name":"seu nome",
+  "ph.from":"Aeroporto CUN",
+  "ph.to":"meu hotel em Tulum",
+  "ph.flight":"opcional",
+  "q.send":"Enviar pelo WhatsApp",
+  "q.err":"Preencha seu nome, de onde sai, para onde vai e a data.",
+  "msg.t":"Sua mensagem chega assim",
+  "msg.n":"O WhatsApp abre com a mensagem pronta; você decide se envia. A reserva é confirmada quando respondemos por escrito.",
+  "st1.h":"Você nos escreve",
+  "st1.p":"Com esta frase ou direto pelo WhatsApp.",
+  "st2.h":"Confirmamos",
+  "st2.p":"Preço, veículo e horário de busca, por escrito.",
+  "st3.h":"Buscamos você",
+  "st3.p":"Avisamos quando seu motorista estiver a caminho.",
+  "c.cap":"Contato",
+  "c.t":"Para onde vamos?",
+  "c.wa":"Escrever pelo WhatsApp",
+  "c.call":"Ligar",
+  "c.ph":"WhatsApp e telefone",
+  "c.mail":"E-mail",
+  "c.hours":"Horário",
+  "c.hoursv":"Todos os dias, das 7h às 22h",
+  "c.zone":"Região",
+  "c.zonev":"Tulum, Playa del Carmen, Cancún e toda a Riviera Maya",
+  "ft.about":"Transporte turístico e privado na Riviera Maya, com base em Tulum.",
+  "ft.company":"Empresa",
+  "ft.legal":"Legal",
+  "ft.privacy":"Aviso de privacidade",
+  "ft.terms":"Termos do serviço",
+  "ft.credits":"Fotos e vídeo: Pexels",
+  "m.hi":"Olá, quero um orçamento da Tulum Sonrise Tours.",
+  "m.svc":"Serviço",
+  "m.from":"Origem",
+  "m.to":"Destino",
+  "m.date":"Data",
+  "m.time":"Horário",
+  "m.pax":"Passageiros",
+  "m.bags":"Malas",
+  "m.flight":"Voo",
+  "m.name":"Nome",
+  "m.svc.airport":"Traslado aeroporto",
+  "m.svc.private":"Transporte privado",
+  "m.svc.tour":"Passeio",
+  "m.svc.group":"Grupo ou evento",
+  "wa.generic":"Olá, quero um orçamento de traslado da Tulum Sonrise Tours."
+ },
+ it: {
+  "wa.tip":"Ti serve un transfer? Scrivici",
+  "skip":"Vai al contenuto",
+  "n.cta":"Chiedi un preventivo",
+  "n.ctasub":"Ti rispondiamo su WhatsApp.",
+  "rv.cap":"Recensioni",
+  "rv.t":"Cosa dice chi ha già viaggiato con noi.",
+  "rv.empty":"Qui appariranno le recensioni reali dei tuoi clienti. Aggiungile nella costante TESTIMONIOS di questo file (nome, provenienza, testo e stelle).",
+  "rv.leave":"Lasciaci una recensione su Google",
+  "nd.t":"Ti aiutiamo con il tuo transfer? Rispondiamo in pochi minuti su WhatsApp.",
+  "nd.go":"Scrivi ora",
+  "nd.x":"No, grazie",
+  "top":"Torna su",
+  "e.name":"il tuo nome",
+  "e.from":"da dove parti",
+  "e.to":"dove vai",
+  "e.date":"la data",
+  "e.past":"Questa data è già passata; scegli oggi o un giorno futuro.",
+  "e.pax":"I passeggeri devono essere tra 1 e 60.",
+  "e.bags":"Le valigie devono essere tra 0 e 80.",
+  "e.missing":"Manca:",
+  "q.ok":"Fatto. Apriamo WhatsApp con il tuo messaggio.",
+  "loader":"Tulum · Riviera Maya",
+  "brand.sub":"Trasporto privato · Riviera Maya",
+  "nav.quote":"Preventivo",
+  "nav.close":"Chiudi",
+  "nav.fleet":"Veicoli",
+  "nav.services":"Servizi",
+  "nav.dest":"Destinazioni",
+  "nav.contact":"Contatti",
+  "hero.cap":"Trasporto turistico e privato",
+  "hero.l1":"Dall'aeroporto",
+  "hero.l2":"al mare,",
+  "hero.l3":"attraverso la giungla.",
+  "hero.sub":"Transfer privati e tour a Tulum, Cancún e in tutta la Riviera Maya. Ti aspettiamo con il tuo nome e ti portiamo direttamente a destinazione.",
+  "cta.wa":"Preventivo su WhatsApp",
+  "cta.dest":"Vedi le destinazioni",
+  "intro.cap":"Siamo di qui",
+  "intro.t":"Un'azienda locale di Tulum. Conosciamo ogni strada, ogni cenote e ogni orario di arrivo in aeroporto.",
+  "f1.k":"Autisti",
+  "f1.v":"Locali e bilingui",
+  "f2.k":"Veicoli",
+  "f2.v":"Privati e con aria condizionata",
+  "f3.k":"Il tuo volo",
+  "f3.v":"Lo seguiamo se è in ritardo",
+  "f4.k":"Preventivo",
+  "f4.v":"In pochi minuti, su WhatsApp",
+  "fleet.cap":"Il tuo trasporto",
+  "fleet.t":"Un veicolo solo per te. Nessuna fermata in altri hotel.",
+  "strip.1":"Accoglienza in aeroporto",
+  "strip.2":"Interni spaziosi per i bagagli",
+  "strip.3":"Autista privato e puntuale",
+  "sv.t":"Servizi",
+  "sv.sub":"Scegline uno e il modulo si compila da solo.",
+  "go":"Preventivo →",
+  "s1.h":"Transfer aeroporto",
+  "s1.p":"Da Cancún (CUN) e Tulum (TQO) al tuo hotel, solo andata o andata e ritorno.",
+  "s2.h":"Trasporto privato",
+  "s2.p":"Tra hotel, ristoranti e città della Riviera Maya, all'ora che preferisci.",
+  "s3.h":"Tour ed escursioni",
+  "s3.p":"Chichén Itzá, Cobá, Tulum, Bacalar e cenote con trasporto di andata e ritorno.",
+  "s4.h":"Gruppi ed eventi",
+  "s4.p":"Matrimoni, ritiri e viaggi aziendali. Coordiniamo più veicoli per il tuo gruppo.",
+  "n.t":"Arrivi stanco dal volo. Al resto pensiamo noi.",
+  "n.1h":"Ti aspettiamo all'uscita",
+  "n.1p":"Il tuo autista ti accoglie agli arrivi con un cartello con il tuo nome e ti aiuta con le valigie.",
+  "n.2h":"Dritto a destinazione",
+  "n.2p":"Veicolo privato per te e il tuo gruppo. Nessun viaggio condiviso e nessuna fermata non richiesta.",
+  "n.3h":"Il tuo ritorno, organizzato",
+  "n.3p":"Programmiamo il rientro in aeroporto con largo anticipo, così l'ultimo giorno non corri.",
+  "d.cap":"Destinazioni",
+  "d.t":"Spiagge, giungla, cenote e città maya. Ti portiamo ovunque.",
+  "d.cenotes":"Cenote",
+  "d1":"Spiagge e sito archeologico · circa 10 min",
+  "d2":"Meraviglia del mondo · circa 2 h",
+  "d3":"Circa 15-40 min",
+  "d4":"Piramide nella giungla · circa 45 min",
+  "d5":"Laguna dei sette colori · circa 2 h 30 min",
+  "d6":"Quinta Avenida e spiaggia · circa 50 min",
+  "d7":"Zona hotel · circa 1 h 45 min",
+  "d.note":"Tocca una destinazione e la aggiungiamo al tuo preventivo. Tempi approssimativi da Tulum.",
+  "water":"Tu goditi l'acqua. La strada la conosciamo noi.",
+  "q.cap":"Chiedi il tuo preventivo",
+  "q.a":"Ciao, sono",
+  "q.b":"Ho bisogno di",
+  "q.c":"per",
+  "q.d":"persone con",
+  "q.e":"valigie, da",
+  "q.f":"a",
+  "q.g":"il",
+  "q.h":"alle",
+  "q.i":"Il mio volo è",
+  "svc.airport":"un transfer dall'aeroporto",
+  "svc.private":"un trasporto privato",
+  "svc.tour":"un tour",
+  "svc.group":"un trasporto per un gruppo",
+  "ph.name":"il tuo nome",
+  "ph.from":"Aeroporto CUN",
+  "ph.to":"il mio hotel a Tulum",
+  "ph.flight":"facoltativo",
+  "q.send":"Invia su WhatsApp",
+  "q.err":"Inserisci il tuo nome, da dove parti, dove vai e la data.",
+  "msg.t":"Il tuo messaggio arriverà così",
+  "msg.n":"WhatsApp si apre con il messaggio pronto; decidi tu se inviarlo. La prenotazione è confermata quando ti rispondiamo per iscritto.",
+  "st1.h":"Ci scrivi",
+  "st1.p":"Con questa frase o direttamente su WhatsApp.",
+  "st2.h":"Confermiamo",
+  "st2.p":"Prezzo, veicolo e orario di partenza, per iscritto.",
+  "st3.h":"Veniamo a prenderti",
+  "st3.p":"Ti avvisiamo quando il tuo autista è in arrivo.",
+  "c.cap":"Contatti",
+  "c.t":"Dove andiamo?",
+  "c.wa":"Scrivi su WhatsApp",
+  "c.call":"Chiama",
+  "c.ph":"WhatsApp e telefono",
+  "c.mail":"E-mail",
+  "c.hours":"Orari",
+  "c.hoursv":"Tutti i giorni, dalle 7:00 alle 22:00",
+  "c.zone":"Zona",
+  "c.zonev":"Tulum, Playa del Carmen, Cancún e tutta la Riviera Maya",
+  "ft.about":"Trasporto turistico e privato nella Riviera Maya, con base a Tulum.",
+  "ft.company":"Azienda",
+  "ft.legal":"Note legali",
+  "ft.privacy":"Informativa sulla privacy",
+  "ft.terms":"Termini del servizio",
+  "ft.credits":"Foto e video: Pexels",
+  "m.hi":"Ciao, vorrei un preventivo da Tulum Sonrise Tours.",
+  "m.svc":"Servizio",
+  "m.from":"Partenza",
+  "m.to":"Destinazione",
+  "m.date":"Data",
+  "m.time":"Ora",
+  "m.pax":"Passeggeri",
+  "m.bags":"Valigie",
+  "m.flight":"Volo",
+  "m.name":"Nome",
+  "m.svc.airport":"Transfer aeroporto",
+  "m.svc.private":"Trasporto privato",
+  "m.svc.tour":"Tour",
+  "m.svc.group":"Gruppo o evento",
+  "wa.generic":"Ciao, vorrei un preventivo per un transfer da Tulum Sonrise Tours."
+ }
+};
+let lang = "es";
+try { const s = localStorage.getItem("sonrise-lang"); if (["es","en","fr","pt","it"].includes(s)) lang = s;
+  else if (!s) { const b = (navigator.language || "es").slice(0, 2); if (["en","fr","pt","it"].includes(b)) lang = b; } } catch (e) {}
+const t = k => I18N[lang][k] ?? I18N.es[k] ?? k;
+function applyLang(l) {
+  lang = l; document.documentElement.lang = l;
+  document.querySelectorAll("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
+  document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+  try { localStorage.setItem("sonrise-lang", l); } catch (e) {}
+  sizeInputs(); preview(); waLinks(); renderReviews();
+}
+document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang)));
+
+const waUrl = s => "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(s);
+function waLinks() { document.querySelectorAll("[data-wa]").forEach(a => { a.href = waUrl(t("wa.generic")); a.target = "_blank"; a.rel = "noopener"; }); }
+
+/* ---------- Sentence quote ---------- */
+const qf = document.getElementById("qf"), pre = document.getElementById("preview"), $ = id => document.getElementById(id);
+function fmtDate(v) { if (!v) return ""; const [y, m, d] = v.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString({ es: "es-MX", en: "en-US", fr: "fr-FR", pt: "pt-BR", it: "it-IT" }[lang], { weekday: "long", day: "numeric", month: "long" }); }
+function message() {
+  const v = id => ($(id).value || "").trim() || "—";
+  const rows = [["m.svc", t("m.svc." + $("service").value)], ["m.from", v("from")], ["m.to", v("to")], ["m.date", fmtDate($("date").value) || "—"], ["m.time", v("time")], ["m.pax", v("pax")], ["m.bags", v("bags")]];
+  if ($("flight").value.trim()) rows.push(["m.flight", $("flight").value.trim().toUpperCase()]);
+  rows.push(["m.name", v("name")]);
+  return t("m.hi") + "\n\n" + rows.map(([k, x]) => "• " + t(k) + ": " + x).join("\n");
+}
+function preview() { pre.textContent = message(); }
+// grow text inputs with their content so the sentence keeps reading as a sentence
+function sizeInputs() {
+  qf.querySelectorAll("input:not([type=number]):not([type=date]):not([type=time])").forEach(i => { const n = Math.max((i.value || i.placeholder || "").length, 3); i.style.width = (n * 0.56 + 0.9) + "em"; });
+}
+qf.addEventListener("input", () => { sizeInputs(); preview(); });
+qf.addEventListener("change", preview);
+function todayISO() { const d = new Date(); return new Date(d - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10); }
+function validate() {
+  const missing = [], other = [], bad = new Set();
+  [["name", "e.name"], ["from", "e.from"], ["to", "e.to"], ["date", "e.date"]].forEach(([id, k]) => { if (!$(id).value.trim()) { missing.push(t(k)); bad.add(id); } });
+  if ($("date").value && $("date").value < todayISO()) { other.push(t("e.past")); bad.add("date"); }
+  const pax = Number($("pax").value); if (!Number.isInteger(pax) || pax < 1 || pax > 60) { other.push(t("e.pax")); bad.add("pax"); }
+  const bags = Number($("bags").value); if (!Number.isInteger(bags) || bags < 0 || bags > 80) { other.push(t("e.bags")); bad.add("bags"); }
+  qf.querySelectorAll("input, select").forEach(el => { const b = bad.has(el.id); el.classList.toggle("bad", b); el.setAttribute("aria-invalid", String(b)); });
+  return { bad, missing, other };
+}
+qf.addEventListener("input", e => { if (e.target.classList.contains("bad")) { e.target.classList.remove("bad"); e.target.setAttribute("aria-invalid", "false"); } });
+qf.addEventListener("submit", e => {
+  e.preventDefault();
+  const { bad, missing, other } = validate(); const box = $("qErr");
+  if (bad.size) {
+    box.className = "q-err";
+    box.innerHTML = (missing.length ? "<strong>" + t("e.missing") + "</strong> " + missing.join(", ") + "." : "") + (other.length ? "<ul>" + other.map(x => "<li>" + x + "</li>").join("") + "</ul>" : "");
+    $([...bad][0]).focus(); return;
+  }
+  box.className = "q-ok"; box.textContent = t("q.ok");
+  const a = document.createElement("a"); a.href = waUrl(message()); a.target = "_blank"; a.rel = "noopener"; document.body.appendChild(a); a.click(); a.remove();
+});
+$("date").min = todayISO();
+const toQuote = () => { $("cotizar").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); };
+document.querySelectorAll("[data-svc]").forEach(a => a.addEventListener("click", () => { $("service").value = a.dataset.svc; preview(); }));
+document.querySelectorAll("[data-dest]").forEach(b => b.addEventListener("click", () => {
+  $("service").value = b.dataset.dest === "Cancún" ? "private" : "tour"; $("to").value = b.dataset.dest;
+  if (!$("from").value) $("from").value = "Tulum";
+  sizeInputs(); preview(); toQuote(); setTimeout(() => $("date").focus({ preventScroll: true }), 700);
+}));
+
+/* ---------- Services peek image (desktop) ---------- */
+const peek = $("peek");
+document.querySelectorAll("[data-peek]").forEach(a => {
+  a.addEventListener("mouseenter", () => { peek.src = a.dataset.peek; peek.classList.add("on"); });
+  a.addEventListener("mouseleave", () => peek.classList.remove("on"));
+  a.addEventListener("mousemove", e => { peek.style.left = (e.clientX + 220) + "px"; peek.style.top = e.clientY + "px"; });
+});
+
+/* ---------- Header, menu, fab ---------- */
+const header = document.querySelector(".header"), hero = document.querySelector(".hero"), fab = $("fab");
+const onScroll = () => { const y = scrollY; header.classList.toggle("is-solid", y > hero.offsetHeight - 90);  };
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+const menu = $("menu"), burger = $("burger");
+const closeMenu = () => { menu.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); };
+burger.addEventListener("click", () => { menu.classList.add("is-open"); burger.setAttribute("aria-expanded", "true"); $("menuClose").focus(); });
+$("menuClose").addEventListener("click", () => { closeMenu(); burger.focus(); });
+menu.querySelectorAll("nav a").forEach(a => a.addEventListener("click", closeMenu));
+addEventListener("keydown", e => { if (e.key === "Escape") closeMenu(); });
+
+/* ---------- Footage: HD on large screens, SD on phones, poster only with reduced motion / data saver ---------- */
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches || (navigator.connection && navigator.connection.saveData);
+if (!still) {
+  const big = matchMedia("(min-width: 900px)").matches;
+  const start = v => { if (v.dataset.on) return; v.dataset.on = 1; v.src = big ? v.dataset.hd : v.dataset.sd; v.play().catch(() => {}); };
+  const vids = document.querySelectorAll("video[data-hd]");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { const v = e.target; if (e.isIntersecting) { start(v); v.play().catch(() => {}); } else if (v.dataset.on) v.pause(); }), { rootMargin: "200px 0px" });
+    vids.forEach(v => io.observe(v));
+  } else vids.forEach(start);
+}
+
+
+/* ---------- Loader (first visit of the session only) ---------- */
+(() => {
+  let seen = false; try { seen = sessionStorage.getItem("sonrise-loaded"); sessionStorage.setItem("sonrise-loaded", "1"); } catch (e) {}
+  if (seen || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const l = document.createElement("div"); l.className = "loader"; l.setAttribute("aria-hidden", "true");
+  l.innerHTML = '<img src="assets/logo.svg" alt=""><p>' + t("loader") + '</p><i></i>';
+  document.body.appendChild(l);
+  const done = () => { l.classList.add("done"); setTimeout(() => l.remove(), 900); };
+  const img = new Image(); img.onload = img.onerror = () => setTimeout(done, 350); img.src = "assets/media/v-hero-poster.jpg";
+  setTimeout(done, 1800);
+})();
+
+/* ---------- Skeletons ---------- */
+document.querySelectorAll(".sk img").forEach(img => { const ok = () => img.closest(".sk").classList.add("ok"); if (img.complete && img.naturalWidth) ok(); else { img.addEventListener("load", ok); img.addEventListener("error", ok); } });
+
+/* ---------- Scroll reveals ---------- */
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px" });
+  document.querySelectorAll(".rv").forEach(el => ro.observe(el));
+} else document.querySelectorAll(".rv").forEach(el => el.classList.add("in"));
+
+/* ---------- Back to top ---------- */
+const totop = $("totop");
+totop.addEventListener("click", () => { scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); $("h1").setAttribute("tabindex", "-1"); $("h1").focus({ preventScroll: true }); });
+addEventListener("scroll", () => totop.classList.toggle("on", scrollY > innerHeight * 1.5), { passive: true });
+
+/* ---------- Social links ---------- */
+const ICONS = {
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/>',
+  facebook: '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5Z"/>',
+  tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.6 2.4 4.4 5 4.6"/>',
+  tripadvisor: '<circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3 9.5c2.5-2 5.6-3 9-3s6.5 1 9 3"/><circle cx="7" cy="13" r=".8" fill="currentColor"/><circle cx="17" cy="13" r=".8" fill="currentColor"/>',
+  google: '<path d="M20 12.2c0 4.6-3.3 8-8 8a8.2 8.2 0 1 1 5.5-14.3"/><path d="M12 12h8"/>'
+};
+const LABEL = { instagram: "Instagram", facebook: "Facebook", tiktok: "TikTok", tripadvisor: "Tripadvisor", google: "Google Maps" };
+(() => {
+  const box = $("social");
+  Object.keys(SOCIAL).forEach(k => {
+    const url = SOCIAL[k]; if (!url && !SHOW_PLACEHOLDERS) return;
+    const a = document.createElement("a"); a.href = url || "#"; a.setAttribute("aria-label", LABEL[k] + (url ? "" : " (pendiente)")); a.title = LABEL[k];
+    if (url) { a.target = "_blank"; a.rel = "noopener"; } else a.className = "tbc-soft";
+    if (!url) a.classList.add("tbc");
+    a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[k] + '</svg>';
+    box.appendChild(a);
+  });
+  const wa = document.createElement("a"); wa.href = waUrl(t("wa.generic")); wa.target = "_blank"; wa.rel = "noopener"; wa.setAttribute("aria-label", "WhatsApp"); wa.title = "WhatsApp";
+  wa.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-3.7A8.5 8.5 0 1 1 20 11.5Z"/></svg>';
+  box.prepend(wa);
+})();
+
+/* ---------- Testimonials (real ones only) ---------- */
+function esc(x) { return String(x).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+function renderReviews() {
+  const sec = $("opiniones"), grid = $("reviewsGrid"), empty = $("reviewsEmpty"), link = $("reviewLink");
+  if (!TESTIMONIOS.length && !SHOW_PLACEHOLDERS && !REVIEW_URL) { sec.hidden = true; return; }
+  sec.hidden = false;
+  grid.innerHTML = TESTIMONIOS.map(r => '<figure class="review"><span class="stars" aria-label="' + (r.stars || 5) + ' de 5">' + "★".repeat(r.stars || 5) + '</span><blockquote>' + esc(r[lang] || r.es || r.en || "") + '</blockquote><footer>' + esc(r.name) + (r.from ? " · " + esc(r.from) : "") + '</footer></figure>').join("");
+  grid.hidden = !TESTIMONIOS.length; empty.hidden = !!TESTIMONIOS.length || !SHOW_PLACEHOLDERS;
+  link.parentElement.hidden = !REVIEW_URL && !SHOW_PLACEHOLDERS; link.href = REVIEW_URL || "#";
+}
+
+/* ---------- Gentle exit nudge: desktop, once per session, only if they haven't messaged ---------- */
+(() => {
+  const n = $("nudge"); let armed = false, used = false;
+  try { if (sessionStorage.getItem("sonrise-nudge")) return; } catch (e) {}
+  if (!matchMedia("(hover: hover) and (min-width: 900px)").matches) return;
+  setTimeout(() => armed = true, 20000);
+  document.addEventListener("click", e => { if (e.target.closest("[data-wa], #qf button")) used = true; });
+  document.addEventListener("mouseout", e => {
+    if (!armed || used || e.relatedTarget || e.clientY > 10) return;
+    armed = false; n.hidden = false; requestAnimationFrame(() => n.classList.add("on"));
+    try { sessionStorage.setItem("sonrise-nudge", "1"); } catch (e2) {}
+  });
+  $("nudgeX").addEventListener("click", () => { n.classList.remove("on"); setTimeout(() => n.hidden = true, 500); });
+})();
+
+
+setTimeout(() => { fab.classList.add('tip'); setTimeout(() => fab.classList.remove('tip'), 6000); }, 4500);
+applyLang(lang);
+</script>
+</body>
+</html>
